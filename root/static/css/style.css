@@ -23,17 +23,17 @@ Top Navigation Bar
     right: 0;
     left: 0;
     z-index: 9999;
-    height: 70px;
+    height: 90px;
     background-color: #fff;
     border-bottom: 2px #ccc solid;
-    line-height: 70px;
+    line-height: 90px;
     text-align: right;
 }
 
 #nav-bar-container {
     width: 960px;
     margin: 0 auto;
-    height: 70px;
+    height: 90px;
     position: fixed;
     top: 0;
     right: 0;
@@ -42,12 +42,13 @@ Top Navigation Bar
 }
 
 .name-block {
-    height: 70px;
+    height: 90px;
     width: 270px;
     background-color: #4aaaa5;
     color: #fff;
-    font-family: 'Gill Sans', 'Helvetica Neue', Helvetica, sans-serif;
+    font-family: 'Georgia', Times, Times New Roman, serif;
     font-size: 28px;
+    font-weight: 600;
     text-align: center;
 }
 
@@ -66,16 +67,15 @@ Top Navigation Bar
     margin: 0;
     padding: 0;
     list-style-type: none;
-    font-family: 'Gill Sans', 'Helvetica Neue', Helvetica, sans-serif;
+    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
     font-size: 18px;
     color: #777;
 }
 
 .nav-bar li {
     display: inline-block;
-    padding-top: 15px;
     padding-left: 10px;
-    padding-right: 10px;
+    padding-right: 10px
 }
 
 /*============================================================================
@@ -83,7 +83,7 @@ Body and bulk page content (including photo on About Me page)
 ============================================================================*/
 
 body {
-    font-family: 'Gill Sans', 'Helvetica Neue', Helvetica, sans-serif;
+    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
     background-color: #eee;
 }
 
@@ -97,11 +97,12 @@ body {
     display: inline-block;
     padding: 25px;
     height: inherit;
+    width: 600px;
     color: #777;
     font-size: 18px;
     background-color: #fff;
     border: 1px #ccc solid;
-    font-family: 'Gill Sans', 'Helvetica Neue', Helvetica, sans-serif;
+    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
 }
 
 hr {
@@ -120,9 +121,10 @@ hr {
 
 h1 {
     color: #4aaaa5;
-    font-family: 'Gill Sans', 'Helvetica Neue', Helvetica, sans-serif;
+    font-family: 'Georgia', Times, Times New Roman, serif;
     font-size: 28px;
     margin: 0;
+    padding-bottom: 5px;
     font-weight: 600;
 }
 
@@ -133,7 +135,7 @@ p {
 
 h2 {
     color: #4aaaa5;
-    font-family: 'Gill Sans', 'Helvetica Neue', Helvetica, sans-serif;
+    font-family: 'Georgia', Times, Times New Roman, serif;
     font-size: 22px;
     margin: 0;
     padding-bottom: 10px;
@@ -229,7 +231,7 @@ table input[value] {
     height: 40px;
     line-height: 40px;
     border: 2px solid #4aaaa5;
-    font-family: 'Gill Sans', 'Helvetica Neue', Helvetica, sans-serif;
+    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
     font-size: 18px;
     text-align: center;
 }
@@ -269,7 +271,7 @@ Portfolio images and links
     height: 18px;
     line-height: 18px;
     width: 280px;
-    font-family: 'Gill Sans', 'Helvetica Neue', Helvetica, sans-serif;
+    font-family: 'Georgia', Times, Times New Roman, serif;
     font-size: 20px;
 }
 
@@ -278,19 +280,15 @@ Sticky footer
 ============================================================================*/
 
 .sticky-footer {
-    margin-top: 70px;
+    margin-top: 40px;
     text-align: center;
-    font-family: 'Gill Sans', 'Helvetica Neue', Helvetica, sans-serif;
-    font-size: 16px;
+    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    font-size: 14px;
     background-color: #666666;
     border-top: 7px #4aaaa5 solid;
-    height: 70px;
+    height: 90px;
     width: 100%;
-    line-height: 70px;
-    color: #d0d0d0;
-}
-
-.sticky-footer a {
+    line-height: 90px;
     color: #d0d0d0;
 }
 
@@ -310,6 +308,10 @@ Media queries for mobile and tablet responsiveness
 
     .body-container {
         width: 700px;
+    }
+
+    .page-content {
+        width: 350px;
     }
 
     #nav-bar-container {
@@ -347,6 +349,10 @@ Media queries for mobile and tablet responsiveness
     .body-container {
         width: 700px;
         margin-top: 120px;
+    }
+
+    .page-content {
+        width: 640px;
     }
 
     #nav-bar-container {
@@ -423,6 +429,10 @@ Media queries for mobile and tablet responsiveness
         margin-top: 120px;
     }
 
+    .page-content {
+        width: 260px;
+    }
+
     .sidebar {
         width: 260px;
         margin-top: 40px;
@@ -446,7 +456,7 @@ Media queries for mobile and tablet responsiveness
         font-size: 20px;
         background-color: #4aaaa5;
         color: #fff;
-        font-family: 'Gill Sans', 'Helvetica Neue', Helvetica, sans-serif;
+        font-family: 'Georgia', Times, Times New Roman, serif;
         font-size: 28px;
         font-weight: 600;
         text-align: center;
