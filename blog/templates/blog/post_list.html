@@ -10,7 +10,9 @@
         </h1>
         <p>
             {{ post.text|linebreaksbr|truncatechars:500 }}
-            <a href="{% url 'post_detail' pk=post.pk %}">read more</a>
+            <a class="read-more" href="{% url 'post_detail' pk=post.pk %}">read more</a>
         </p>
+        <!-- TODO: make this not appear on last child -->
+        <hr>
     {% endfor %}
 {% endblock %}

@@ -24,8 +24,7 @@ Top Navigation Bar
     left: 0;
     z-index: 9999;
     height: 70px;
-    background-color: #fff;
-    border-bottom: 2px #ccc solid;
+    background-color: #123C69;
     line-height: 70px;
     text-align: right;
 }
@@ -44,21 +43,22 @@ Top Navigation Bar
 .name-block {
     height: 70px;
     width: 270px;
-    background-color: #4aaaa5;
     color: #fff;
-    font-family: 'Gill Sans', 'Helvetica Neue', Helvetica, sans-serif;
+    font-family: 'Proxima', 'Helvetica Neue', Helvetica, sans-serif;
     font-size: 28px;
-    text-align: center;
+    font-weight: 300;
+    text-align: left;
     letter-spacing: 1.5px;
 }
 
 .nav-bar a {
-    color: #777;
+    color: #fff;
     text-decoration: none;
 }
 
 .nav-bar a:hover {
-    color: #4aaaa5;
+    color: #AC3B61;
+    font-weight: 400;
 }
 
 .nav-bar ul {
@@ -67,16 +67,26 @@ Top Navigation Bar
     margin: 0;
     padding: 0;
     list-style-type: none;
-    font-family: 'Gill Sans', 'Helvetica Neue', Helvetica, sans-serif;
+    font-family: 'Proxima', 'Helvetica Neue', Helvetica, sans-serif;
     font-size: 18px;
-    color: #777;
+    font-weight: 300;
+    color: #fff;
+}
+
+.dropdown-menu {
+    background-color: #fff;
 }
 
 .nav-bar li {
     display: inline-block;
-    padding-top: 15px;
+    padding-top: 18px;
     padding-left: 10px;
     padding-right: 10px;
+}
+
+.open>.dropdown-menu {
+    backgroud-color: #fff;
+    top: 0;
 }
 
 /*============================================================================
@@ -84,8 +94,8 @@ Body and bulk page content (including photo on About Me page)
 ============================================================================*/
 
 body {
-    font-family: 'Gill Sans', 'Helvetica Neue', Helvetica, sans-serif;
-    background-color: #eee;
+    font-family: 'Proxima', 'Helvetica Neue', Helvetica, sans-serif;
+    background-color: #EEE2DC;
 }
 
 .body-container {
@@ -98,18 +108,16 @@ body {
     display: inline-block;
     padding: 25px;
     height: inherit;
-    color: #777;
     font-size: 18px;
     background-color: #fff;
-    border: 1px #ccc solid;
-    font-family: 'Gill Sans', 'Helvetica Neue', Helvetica, sans-serif;
+    font-family: 'Proxima', 'Helvetica Neue', Helvetica, sans-serif;
 }
 
 hr {
     display: block;
     border-style: solid;
-    border-width: 1px;
-    color: #ccc;
+    border-width: 0.5px;
+    color: #123C69;
 }
 
 #patricia-photo {
@@ -120,25 +128,45 @@ hr {
 }
 
 h1 {
-    color: #4aaaa5;
-    font-family: 'Gill Sans', 'Helvetica Neue', Helvetica, sans-serif;
+    color: #123C69;
+    font-family: 'Proxima', 'Helvetica Neue', Helvetica, sans-serif;
     font-size: 28px;
     margin: 0;
-    font-weight: 600;
+    font-weight: 350;
 }
 
 p {
     line-height: 1.5;
     padding: 10px 0;
+    font-weight: 300;
 }
 
 h2 {
     color: #4aaaa5;
-    font-family: 'Gill Sans', 'Helvetica Neue', Helvetica, sans-serif;
+    font-family: 'Proxima', 'Helvetica Neue', Helvetica, sans-serif;
     font-size: 22px;
     margin: 0;
     padding-bottom: 10px;
     font-weight: 600;
+}
+
+.read-more {
+    font-weight: 350;
+    color: #AC3B61;
+}
+
+.read-more:hover {
+    font-weight: 500;
+}
+
+a {
+  color: #123C69;
+  text-decoration: none;
+}
+
+a:hover {
+    color: #AC3B61;
+    text-decoration: none;
 }
 
 /*============================================================================
@@ -189,7 +217,7 @@ table input[value] {
     height: 40px;
     line-height: 40px;
     border: 2px solid #4aaaa5;
-    font-family: 'Gill Sans', 'Helvetica Neue', Helvetica, sans-serif;
+    font-family: 'Proxima', 'Helvetica Neue', Helvetica, sans-serif;
     font-size: 18px;
     text-align: center;
 }
@@ -229,7 +257,7 @@ Portfolio images and links
     height: 18px;
     line-height: 18px;
     width: 280px;
-    font-family: 'Gill Sans', 'Helvetica Neue', Helvetica, sans-serif;
+    font-family: 'Proxima', 'Helvetica Neue', Helvetica, sans-serif;
     font-size: 20px;
 }
 
@@ -240,18 +268,26 @@ Sticky footer
 .sticky-footer {
     margin-top: 70px;
     text-align: center;
-    font-family: 'Gill Sans', 'Helvetica Neue', Helvetica, sans-serif;
+    font-family: 'Proxima', 'Helvetica Neue', Helvetica, sans-serif;
     font-size: 16px;
-    background-color: #666666;
-    border-top: 7px #4aaaa5 solid;
+    font-weight: 300;
+    background-color: #123C69;
     height: 70px;
     width: 100%;
     line-height: 70px;
-    color: #d0d0d0;
+    color: #fff;
+    letter-spacing: 1.5px;
 }
 
 .sticky-footer a {
-    color: #d0d0d0;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 1.5px;
+}
+
+.sticky-footer a:hover {
+    color: #AC3B61;
+    font-weight: 400;
 }
 
 /*============================================================================
@@ -406,7 +442,7 @@ Media queries for mobile and tablet responsiveness
         font-size: 20px;
         background-color: #4aaaa5;
         color: #fff;
-        font-family: 'Gill Sans', 'Helvetica Neue', Helvetica, sans-serif;
+        font-family: 'Proxima', 'Helvetica Neue', Helvetica, sans-serif;
         font-size: 28px;
         font-weight: 600;
         text-align: center;
