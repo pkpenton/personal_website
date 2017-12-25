@@ -49,6 +49,7 @@ Top Navigation Bar
     font-family: 'Gill Sans', 'Helvetica Neue', Helvetica, sans-serif;
     font-size: 28px;
     text-align: center;
+    letter-spacing: 1.5px;
 }
 
 .nav-bar a {
@@ -138,47 +139,6 @@ h2 {
     margin: 0;
     padding-bottom: 10px;
     font-weight: 600;
-}
-
-/*============================================================================
-Side Bar ("Connect with Me")
-============================================================================*/
-
-.sidebar {
-    border: 1px #ccc solid;
-    display: inline-block;
-    width: 200px;
-    background-color: #fff;
-    height: inherit;
-    float: right;
-    padding: 25px;
-}
-
-.connect-image-row {
-    padding-top: 10px;
-    text-align: center;
-}
-
-.connect-img {
-    height: 55px;
-    display: inline-block;
-}
-
-.connect-img:hover {
-    opacity: 0.5;
-    filter: alpha(opacity=50);
-}
-
-.left {
-    float: left;
-}
-
-.middle {
-    margin: auto;
-}
-
-.right {
-    float: right;
 }
 
 /*============================================================================
