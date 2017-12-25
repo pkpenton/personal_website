@@ -18,8 +18,9 @@
         Patricia Penton
     </div>
     <ul class="mobile-nav-links hide-for-desktop hide-for-tablet">
-        <li><a href="index.html">About</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="{% url 'resume' %">Resume</a></li>|
+        <li><a href="{% url 'post_list' %}">Blog</a></li>|
+        <!-- TODO: add link to games page -->
+        <li><a href="/">Games</a></li>
     </ul>
 </div>

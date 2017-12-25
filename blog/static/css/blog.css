@@ -84,11 +84,6 @@ Top Navigation Bar
     padding-right: 10px;
 }
 
-.open>.dropdown-menu {
-    backgroud-color: #fff;
-    top: 0;
-}
-
 /*============================================================================
 Body and bulk page content (including photo on About Me page)
 ============================================================================*/
@@ -440,16 +435,15 @@ Media queries for mobile and tablet responsiveness
         height: 60px;
         line-height: 60px;
         font-size: 20px;
-        background-color: #4aaaa5;
+        background-color: #123C69;
         color: #fff;
         font-family: 'Proxima', 'Helvetica Neue', Helvetica, sans-serif;
         font-size: 28px;
-        font-weight: 600;
         text-align: center;
     }
 
     .nav-bar ul {
-        bottom: 30px;
+        padding-top: 10px;
         text-align: center;
     }
 
