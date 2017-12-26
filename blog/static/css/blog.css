@@ -1,46 +1,476 @@
-.page-header {
-    background-color: #ff9400;
-    margin-top: 0;
-    padding: 20px 20px 20px 40px;
+/*============================================================================
+Initial site CSS (allows for a sticky footer, see sticky-footer section below)
+============================================================================*/
+
+.site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  margin: 0;
 }
 
-.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
-    color: #ffffff;
-    font-size: 36pt;
+.site-content {
+  flex: 1;
+}
+
+/*============================================================================
+Top Navigation Bar
+============================================================================*/
+
+.nav-bar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 9999;
+    height: 70px;
+    background-color: #123C69;
+    line-height: 70px;
+    text-align: right;
+}
+
+#nav-bar-container {
+    width: 960px;
+    margin: 0 auto;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+.name-block {
+    height: 70px;
+    width: 270px;
+    color: #fff;
+    font-family: 'Proxima', 'Helvetica Neue', Helvetica, sans-serif;
+    font-size: 28px;
+    font-weight: 300;
+    text-align: left;
+    letter-spacing: 1.5px;
+}
+
+.nav-bar a {
+    color: #fff;
     text-decoration: none;
 }
 
-.content {
-    margin-left: 40px;
+.nav-bar a:hover {
+    color: #AC3B61;
+    font-weight: 400;
 }
 
-h1, h2, h3, h4 {
-    font-family: 'Lobster', cursive;
+.nav-bar ul {
+    position:relative;
+    bottom: 90px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    font-family: 'Proxima', 'Helvetica Neue', Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    color: #fff;
 }
 
-.date {
-    color: #828282;
+.dropdown-menu {
+    background-color: #fff;
 }
 
-.save {
-    float: right;
+.nav-bar li {
+    display: inline-block;
+    padding-top: 18px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
-.post-form textarea, .post-form input {
+/*============================================================================
+Body and bulk page content (including photo on About Me page)
+============================================================================*/
+
+body {
+    font-family: 'Proxima', 'Helvetica Neue', Helvetica, sans-serif;
+    background-color: #EEE2DC;
+}
+
+.body-container {
+    width: 960px;
+    margin: auto;
+    margin-top: 135px;
+}
+
+.page-content {
+    display: inline-block;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 25px;
+    height: inherit;
+    font-size: 18px;
+    background-color: #fff;
+    font-family: 'Proxima', 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+hr {
+    display: block;
+    border-style: solid;
+    border-width: 0.5px;
+    color: #123C69;
+}
+
+#patricia-photo {
+    width: 200px;
+    display: inline-block;
+    float: left;
+    padding: 15px 20px 0 0;
+}
+
+h1 {
+    color: #123C69;
+    font-family: 'Proxima', 'Helvetica Neue', Helvetica, sans-serif;
+    font-size: 28px;
+    margin: 0;
+    font-weight: 350;
+}
+
+p {
+    line-height: 1.5;
+    padding: 10px 0;
+    font-weight: 300;
+}
+
+h2 {
+    color: #4aaaa5;
+    font-family: 'Proxima', 'Helvetica Neue', Helvetica, sans-serif;
+    font-size: 22px;
+    margin: 0;
+    padding-bottom: 10px;
+    font-weight: 600;
+}
+
+.read-more {
+    font-weight: 350;
+    color: #AC3B61;
+}
+
+.read-more:hover {
+    font-weight: 500;
+}
+
+a {
+  color: #123C69;
+  text-decoration: none;
+}
+
+a:hover {
+    color: #AC3B61;
+    text-decoration: none;
+}
+
+/*============================================================================
+Contact Page Form
+============================================================================*/
+
+form {
+    padding-top: 15px;
+}
+
+table {
+    height: inherit;
+    width: 600px;
+}
+
+tr {
+    padding-bottom: 10px
+}
+
+table input[type=text] {
     width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+    box-sizing: border-box;
 }
 
-.top-menu, .top-menu:hover, .top-menu:visited {
-    color: #ffffff;
+table input[name=message] {
+    width: 100%;
+    height: 200px;
+    padding: 8px;
+    color: #ccc;
+    font-size: 16px;
+}
+
+table input[value] {
+    color: #ccc;
+    font-size: 16px;
+}
+
+.button-container {
+    padding-top: 15px;
+}
+
+.button {
+    color: #fff;
+    background-color: #4aaaa5;
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    border: 2px solid #4aaaa5;
+    font-family: 'Proxima', 'Helvetica Neue', Helvetica, sans-serif;
+    font-size: 18px;
+    text-align: center;
+}
+
+.button:hover {
+    color: #4aaaa5;
+    background-color: #fff;
+    border: 2px solid #4aaaa5;
+}
+
+/*============================================================================
+Portfolio images and links
+============================================================================*/
+
+.portfolio-img-container {
+    width: auto;
+    display: inline-table;
+}
+
+.portfolio-image {
+    width: 280px;
+    padding: 20px 0;
+}
+
+.odd {
+    float: left;
+}
+
+.even {
     float: right;
-    font-size: 26pt;
-    margin-right: 20px;
 }
 
-.post {
-    margin-bottom: 70px;
+.text-box {
+    background-color: #4aaaa5;
+    color: #fff;
+    text-align: center;
+    height: 18px;
+    line-height: 18px;
+    width: 280px;
+    font-family: 'Proxima', 'Helvetica Neue', Helvetica, sans-serif;
+    font-size: 20px;
 }
 
-.post h1 a, .post h1 a:visited {
-    color: #000000;
+/*============================================================================
+Sticky footer
+============================================================================*/
+
+.sticky-footer {
+    margin-top: 70px;
+    text-align: center;
+    font-family: 'Proxima', 'Helvetica Neue', Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    background-color: #123C69;
+    height: 70px;
+    width: 100%;
+    line-height: 70px;
+    color: #fff;
+    letter-spacing: 1.5px;
+}
+
+.sticky-footer a {
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 1.5px;
+}
+
+.sticky-footer a:hover {
+    color: #AC3B61;
+    font-weight: 400;
+}
+
+/*============================================================================
+Media queries for mobile and tablet responsiveness
+============================================================================*/
+@media screen and (max-width: 2000px) {
+    .hide-for-desktop {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .hide-for-desktop {
+        display: none;
+    }
+
+    .body-container {
+        width: 700px;
+    }
+
+    #nav-bar-container {
+        width: 700px;
+    }
+
+    #patricia-photo {
+        float: none;
+        padding: 15px 0 5px 0;
+        width: 335px;
+    }
+
+    table input[type=text] {
+        width: 340px;
+    }
+
+    .portfolio-img-container {
+        margin-left: 10px;
+    }
+
+    .portfolio-image {
+        width: 330px;
+    }
+
+    .even {
+        float: left;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hide-for-tablet {
+        display: none;
+    }
+
+    .body-container {
+        width: 700px;
+        margin-top: 120px;
+    }
+
+    #nav-bar-container {
+        width: 700px;
+    }
+
+    .nav-bar {
+        height: 70px;
+        line-height: 70px;
+    }
+
+    .name-block {
+        height: 70px;
+        line-height: 70px;
+        width: 200px;
+        font-size: 20px;
+    }
+
+    .nav-bar ul {
+        bottom: 70px;
+    }
+
+    .sidebar {
+        width: 640px;
+        margin-top: 40px;
+        margin-bottom: 5px;
+        float: none;
+    }
+
+    .connect-image-row {
+        display: inherit;
+    }
+
+    .middle {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    table input[type=text] {
+        width: 630px;
+    }
+
+    #patricia-photo {
+        width: 205px;
+        display: inline-block;
+        float: left;
+        padding: 15px 20px 0 0;
+    }
+
+    .portfolio-img-container {
+        margin-left: auto;
+    }
+
+    .portfolio-image {
+        width: 300px;
+    }
+
+    .even {
+        float: right;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .hide-for-mobile {
+        display: none;
+    }
+
+    .hide-for-tablet {
+        display: inherit;
+    }
+
+    .body-container {
+        width: 300px;
+        margin-top: 120px;
+    }
+
+    .sidebar {
+        width: 260px;
+        margin-top: 40px;
+        margin-bottom: 5px;
+        float: none;
+    }
+
+    #nav-bar-container {
+        width: 315px;
+        margin: 0;
+    }
+
+    .nav-bar {
+        height: 100px;
+        line-height: 100px;
+    }
+
+    .mobile-name-block {
+        height: 60px;
+        line-height: 60px;
+        font-size: 20px;
+        background-color: #123C69;
+        color: #fff;
+        font-family: 'Proxima', 'Helvetica Neue', Helvetica, sans-serif;
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .nav-bar ul {
+        padding-top: 10px;
+        text-align: center;
+    }
+
+    .connect-image-row {
+        display: inherit;
+    }
+
+    form, table, tbody, tr, td {
+        width: 255px;
+    }
+
+    #patricia-photo {
+        float: none;
+        padding: 15px 0 5px 0;
+        width: 245px;
+    }
+
+    .portfolio-image {
+        width: 255px;
+    }
+
+    .even {
+        float: left;
+    }
+
+    table input[type=text] {
+        width: 255px;
+    }
 }
