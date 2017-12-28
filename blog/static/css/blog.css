@@ -45,6 +45,7 @@ Top Navigation Bar
     width: 270px;
     color: #fff;
     font-family: 'Proxima', 'Helvetica Neue', Helvetica, sans-serif;
+    /*font-family: 'Amatic SC', cursive;*/
     font-size: 28px;
     font-weight: 300;
     text-align: left;
@@ -58,7 +59,6 @@ Top Navigation Bar
 
 .nav-bar a:hover {
     color: #AC3B61;
-    font-weight: 400;
 }
 
 .nav-bar ul {
@@ -68,6 +68,7 @@ Top Navigation Bar
     padding: 0;
     list-style-type: none;
     font-family: 'Proxima', 'Helvetica Neue', Helvetica, sans-serif;
+    /*font-family: 'Amatic SC', cursive;*/
     font-size: 18px;
     font-weight: 300;
     color: #fff;
@@ -84,13 +85,49 @@ Top Navigation Bar
     padding-right: 10px;
 }
 
+/*===========================================================================
+Jumbotron
+============================================================================*/
+
+.jumbotron {
+    position: relative;
+    background: #000 url("/media/images/ecuador.jpg") center center;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    overflow: hidden;
+    text-align: right;
+    margin-bottom: 0;
+}
+
+.container {
+    width: 960px;
+}
+
+.display-3 {
+    margin-top: 50px;
+    font-family: 'Amatic SC', cursive;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.jumbo-subheader {
+    font-family: 'Amatic SC', cursive;
+    font-size: 33px;
+    padding-top: 0;
+}
+
+p.jumbo-subheader {
+    font-size: 33px;
+}
+
 /*============================================================================
 Body and bulk page content (including photo on About Me page)
 ============================================================================*/
 
 body {
     font-family: 'Proxima', 'Helvetica Neue', Helvetica, sans-serif;
-    background-color: #EEE2DC;
+    background-color: #4e724e4d;
 }
 
 .body-container {
@@ -101,12 +138,13 @@ body {
 
 .page-content {
     display: inline-block;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    /*box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
     padding: 25px;
     height: inherit;
     font-size: 18px;
     background-color: #fff;
     font-family: 'Proxima', 'Helvetica Neue', Helvetica, sans-serif;
+    margin-bottom: 80px;
 }
 
 hr {
@@ -116,18 +154,11 @@ hr {
     color: #123C69;
 }
 
-#patricia-photo {
-    width: 200px;
-    display: inline-block;
-    float: left;
-    padding: 15px 20px 0 0;
-}
-
 h1 {
     color: #123C69;
     font-family: 'Proxima', 'Helvetica Neue', Helvetica, sans-serif;
     font-size: 28px;
-    margin: 0;
+    padding-bottom: 15px;
     font-weight: 350;
 }
 
@@ -135,6 +166,7 @@ p {
     line-height: 1.5;
     padding: 10px 0;
     font-weight: 300;
+    font-family: 'Proxima', 'Helvetica Neue', Helvetica, sans-serif;
 }
 
 h2 {
@@ -163,6 +195,10 @@ a {
 a:hover {
     color: #AC3B61;
     text-decoration: none;
+}
+
+.full-width {
+    width: 100%;
 }
 
 /*============================================================================
@@ -225,44 +261,10 @@ table input[value] {
 }
 
 /*============================================================================
-Portfolio images and links
-============================================================================*/
-
-.portfolio-img-container {
-    width: auto;
-    display: inline-table;
-}
-
-.portfolio-image {
-    width: 280px;
-    padding: 20px 0;
-}
-
-.odd {
-    float: left;
-}
-
-.even {
-    float: right;
-}
-
-.text-box {
-    background-color: #4aaaa5;
-    color: #fff;
-    text-align: center;
-    height: 18px;
-    line-height: 18px;
-    width: 280px;
-    font-family: 'Proxima', 'Helvetica Neue', Helvetica, sans-serif;
-    font-size: 20px;
-}
-
-/*============================================================================
 Sticky footer
 ============================================================================*/
 
 .sticky-footer {
-    margin-top: 70px;
     text-align: center;
     font-family: 'Proxima', 'Helvetica Neue', Helvetica, sans-serif;
     font-size: 16px;
@@ -283,7 +285,6 @@ Sticky footer
 
 .sticky-footer a:hover {
     color: #AC3B61;
-    font-weight: 400;
 }
 
 /*============================================================================
@@ -317,18 +318,6 @@ Media queries for mobile and tablet responsiveness
     table input[type=text] {
         width: 340px;
     }
-
-    .portfolio-img-container {
-        margin-left: 10px;
-    }
-
-    .portfolio-image {
-        width: 330px;
-    }
-
-    .even {
-        float: left;
-    }
 }
 
 @media screen and (max-width: 768px) {
@@ -359,45 +348,6 @@ Media queries for mobile and tablet responsiveness
 
     .nav-bar ul {
         bottom: 70px;
-    }
-
-    .sidebar {
-        width: 640px;
-        margin-top: 40px;
-        margin-bottom: 5px;
-        float: none;
-    }
-
-    .connect-image-row {
-        display: inherit;
-    }
-
-    .middle {
-        padding-right: 15px;
-        padding-left: 15px;
-    }
-
-    table input[type=text] {
-        width: 630px;
-    }
-
-    #patricia-photo {
-        width: 205px;
-        display: inline-block;
-        float: left;
-        padding: 15px 20px 0 0;
-    }
-
-    .portfolio-img-container {
-        margin-left: auto;
-    }
-
-    .portfolio-image {
-        width: 300px;
-    }
-
-    .even {
-        float: right;
     }
 }
 
@@ -446,31 +396,5 @@ Media queries for mobile and tablet responsiveness
     .nav-bar ul {
         padding-top: 10px;
         text-align: center;
-    }
-
-    .connect-image-row {
-        display: inherit;
-    }
-
-    form, table, tbody, tr, td {
-        width: 255px;
-    }
-
-    #patricia-photo {
-        float: none;
-        padding: 15px 0 5px 0;
-        width: 245px;
-    }
-
-    .portfolio-image {
-        width: 255px;
-    }
-
-    .even {
-        float: left;
-    }
-
-    table input[type=text] {
-        width: 255px;
     }
 }
