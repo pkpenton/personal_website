@@ -1,0 +1,152 @@
+{% load staticfiles %}
+<!-- TODO: make most of this a base html template -->
+<html>
+    <head>
+        <title>Resume</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Quicksand" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    </head>
+
+    <body class="site">
+        <header>
+            {% include "blog/navbar.html" %}
+        </header>
+
+        <div class="body-container site-content">
+            <div class="page-content">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h1>Employment Experience</h1>
+
+                        <h2 class="job-title">Software Engineer</h2>
+                        <h2 class="company"><a href="http://23andme.com" target="_blank">23andMe</a></h2>
+                        <h3>April 2107 - Present</h3>
+                        <ul>
+                            <li>Solves challenging engineering problems that come with building a
+                                highly interactive  website and manipulating large amounts of data
+                            </li>
+                            <li>
+                                Designs and implements new features using test driven development
+                            </li>
+                            <li>
+                                Technologies used: Python, Django, MySQL, HTML, CSS, Sass, YAML, Jinja, Git
+                            </li>
+                        </ul>
+
+                        <h2 class="job-title">Engineering Research Assistant</h2>
+                        <h2 class="company"><a href="https://23andme.com" target="_blank">23andMe</a></h2>
+                        <h3>June 2015 - April 2017</h3>
+                        <ul>
+                            <li>Built and maintained web-based interfaces that supported
+                                recruitment, enrollment, and engagement efforts for research studies
+                            </li>
+                            <li>
+                                Created, tested, and debugged automated emails and web banners
+                                targeted to specific subsets of 23andMe research participants
+                            </li>
+                            <li>
+                                Technologies used: HTML, CSS, Sass, YAML, Jinja, Git
+                            </li>
+                        </ul>
+
+                        <h2 class="job-title">Microbiologist</h2>
+                        <h2 class="company">
+                            <a href="https://www.cdc.gov/" target="_blank">US Centers for Disease Control</a>
+                        </h2>
+                        <h3>October 2013 - June 2015</h3>
+                        <ul>
+                            <li>Contributed DNA sequence analysis of 16S rRNA and bacterial photography
+                                for MicrobeNet, a web-based tool for identification of microbial pathogens
+                            </li>
+                            <li>
+                                Sequenced the genome of <em>Corynebacterium minutissimum</em>; published findings
+                                in <em>Genome Announcements</em>
+                            </li>
+                        </ul>
+
+                        <h2 class="job-title">Supplemental Instructor</h2>
+                        <h2 class="company">
+                            <a href="http://www.uc.edu/" target="_blank">University of Cincinnati</a>
+                        </h2>
+                        <h3>September 2010 - April 2013</h3>
+                        <ul>
+                            <li>Conducted voluntary group review sessions for students enrolled in the
+                                Introductory Biology course series
+                            </li>
+                            <li>
+                                Students who attended attended my sessions earned higher grades in
+                                Biology and a higher overall GPA than their non-attending peers
+                            </li>
+                        </ul>
+
+                        <h2 class="job-title">Field Manager, Community Organizer</h2>
+                        <h2 class="company">
+                            <a href="https://www.workingamerica.org/" target="_blank">Working America</a>
+                        </h2>
+                        <h3>March 2007 - November 2008</h3>
+                        <ul>
+                            <li>Developed, supervised and managed a team of canvass staff to do high
+                                quality community outreach and organizing
+                            </li>
+                            <li>
+                                Consistently met and surpassed weekly requirements for recruitment,
+                                calls to action, voter registration, and fundraising
+                            </li>
+                        </ul>
+
+                        <hr>
+
+                        <h1>Education</h1>
+
+                        <h2 class="job-title">Bachelor of Science, Cell &amp; Molecular Biology</h2>
+                        <h2 class="company">
+                            <a href="http://www.uc.edu/" target="_blank">University of Cincinnati</a>
+                        </h2>
+                        <ul>
+                            <li>
+                                Departmental honors in biology
+                            </li>
+                            <li>
+                                University Honors Scholar
+                            </li>
+                        </ul>
+
+                        <h2 class="job-title">Certificate, Full Stack Web Development</h2>
+                        <h2 class="company">
+                            <a href="https://berkeley.edu/" target="_blank">University of California, Berkeley</a>
+                        </h2>
+                        <ul>
+                            <li>
+                                Technologies covered: HTML, CSS, Bootstrap, JavaScript, jQuery, Node, ES6,
+                                MySQL, Express, React, Java, Python
+                            </li>
+                        </ul>
+
+                        <hr>
+
+                        <h1>Volunteer</h1>
+
+                        <h2 class="job-title">Warehouse Volunteer</h2>
+                        <h2 class="company">
+                            <a href="https://www.sfmfoodbank.org/" target="_blank">SF-Marin Foodbank</a>
+                        </h2>
+
+                        <br>
+
+                        <h2 class="job-title">Solar Panel Installer</h2>
+                        <h2 class="company">
+                            <a href="http://www.sunwork.org/" target="_blank">SunWork Renewable Energy Projects</a>
+                        </h2>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {% include "blog/footer.html" %}
+    </body>
+</html>
