@@ -84,7 +84,7 @@ Top Navigation Bar
 Jumbotron
 ============================================================================*/
 
-.jumbotron {
+/*.jumbotron {
     position: relative;
     background: #000 url("/media/images/ecuador.jpg") center center;
     width: 100%;
@@ -116,7 +116,7 @@ Jumbotron
 p.jumbo-subheader {
     font-size: 33px;
     color: black;
-}
+}*/
 
 /*============================================================================
 Body and bulk page content (including photo on About Me page)
