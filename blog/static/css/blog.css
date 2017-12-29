@@ -1,5 +1,5 @@
 /*============================================================================
-Initial site CSS (allows for a sticky footer, see sticky-footer section below)
+Initial site CSS (allows for a sticky footer
 ============================================================================*/
 
 .site {
@@ -14,74 +14,7 @@ Initial site CSS (allows for a sticky footer, see sticky-footer section below)
 }
 
 /*============================================================================
-Top Navigation Bar
-============================================================================*/
-
-.nav-bar {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 9999;
-    height: 70px;
-    background-color: #123C69;
-    line-height: 70px;
-    text-align: right;
-}
-
-#nav-bar-container {
-    width: 960px;
-    margin: 0 auto;
-    height: 70px;
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 9999;
-}
-
-.name-block {
-    color: #fff;
-    font-family: 'Amatic SC', serif;
-    font-size: 38px;
-    text-align: left;
-    letter-spacing: 1.5px;
-    padding-left: 10px;
-}
-
-.nav-bar a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.nav-bar a:hover {
-    color: #AC3B61;
-}
-
-.nav-bar ul {
-    position:relative;
-    bottom: 90px;
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    font-family: 'Amatic SC', serif;
-    font-size: 28px;
-    color: #fff;
-}
-
-.dropdown-menu {
-    background-color: #fff;
-}
-
-.nav-bar li {
-    display: inline-block;
-    padding-top: 18px;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-/*============================================================================
-Body and bulk page content (including photo on About Me page)
+Body and bulk page content
 ============================================================================*/
 
 body {
@@ -183,31 +116,6 @@ a:hover {
 
 .full-width {
     width: 100%;
-}
-
-/*============================================================================
-Sticky footer
-============================================================================*/
-
-.sticky-footer {
-    text-align: center;
-    font-family: 'Amatic SC', serif;
-    font-size: 26px;
-    background-color: #123C69;
-    height: 70px;
-    width: 100%;
-    line-height: 70px;
-    color: #fff;
-    letter-spacing: 1.5px;
-}
-
-.sticky-footer a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.sticky-footer a:hover {
-    color: #AC3B61;
 }
 
 /*============================================================================
