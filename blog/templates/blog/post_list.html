@@ -1,41 +1,45 @@
 {% extends 'blog/blog_base.html' %}
 
 {% block content %}
-    {% for post in posts %}
-        <div class="row">
-            <div class="col-xs-12">
-                <p>
-                    {{ post.published_date }}
-                </p>
-                <h1>
-                    <a class="blog-h1" href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a>
-                </h1>
-            </div>
-        </div>
+    <div class="body-container site-content">
+        <div class="page-content">
+            {% for post in posts %}
+                <div class="row">
+                    <div class="col-xs-12">
+                        <p>
+                            {{ post.published_date }}
+                        </p>
+                        <h1>
+                            <a class="blog-h1" href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a>
+                        </h1>
+                    </div>
+                </div>
 
-        <div class="row">
-            {% if post.image %}
-            <div class="col-xs-3">
-                    <img class="full-width" src="{{ post.image.url }}" alt="Blog post image">
-            </div>
-            <div class="col-xs-9">
-                <p>
-                    {{ post.text|linebreaksbr|truncatechars:500 }}
-                    <a class="read-more" href="{% url 'post_detail' pk=post.pk %}">read more</a>
-                </p>
-            </div>
-            {% else %}
-            <div class="col-xs-12">
-                <p>
-                    {{ post.text|linebreaksbr|truncatechars:500 }}
-                    <a class="read-more" href="{% url 'post_detail' pk=post.pk %}">read more</a>
-                </p>
-            </div>
-            {% endif %}
-        </div>
+                <div class="row">
+                    {% if post.image %}
+                    <div class="col-xs-3">
+                            <img class="full-width" src="{{ post.image.url }}" alt="Blog post image">
+                    </div>
+                    <div class="col-xs-9">
+                        <p>
+                            {{ post.text|linebreaksbr|truncatechars:500 }}
+                            <a class="read-more" href="{% url 'post_detail' pk=post.pk %}">read more</a>
+                        </p>
+                    </div>
+                    {% else %}
+                    <div class="col-xs-12">
+                        <p>
+                            {{ post.text|linebreaksbr|truncatechars:500 }}
+                            <a class="read-more" href="{% url 'post_detail' pk=post.pk %}">read more</a>
+                        </p>
+                    </div>
+                    {% endif %}
+                </div>
 
-        {% if not forloop.last %}
-            <hr>
-        {% endif %}
-    {% endfor %}
+                {% if not forloop.last %}
+                    <hr>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
 {% endblock %}

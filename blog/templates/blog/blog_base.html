@@ -16,12 +16,8 @@
             {% include "blog/navbar.html" %}
         </header>
 
-        <div class="body-container site-content">
-            <div class="page-content">
-                {% block content %}
-                {% endblock %}
-            </div>
-        </div>
+        {% block content %}
+        {% endblock %}
 
         {% include "blog/footer.html" %}
     </body>
