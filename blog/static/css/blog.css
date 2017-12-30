@@ -1,5 +1,5 @@
 /*============================================================================
-Initial site CSS (allows for a sticky footer
+Initial site CSS allows for a sticky footer
 ============================================================================*/
 
 .site {
@@ -29,7 +29,7 @@ body {
 
 .page-content {
     display: inline-block;
-    padding: 40px 25px 50px 25px;
+    padding: 0 25px 50px 25px;
     height: inherit;
     font-size: 18px;
     font-family: 'Quicksand', sans-serif;
@@ -65,11 +65,20 @@ h2.company {
     font-size: 18px;
 }
 
+h2.company a:hover {
+    color: #AC3B61;
+    font-weight: bold;
+}
+
 h3 {
     color: #123C69;
     font-family: 'Quicksand', sans-serif;
     font-size: 14px;
     margin-top: 0;
+}
+
+h3.pi {
+    font-size: 16px;
 }
 
 p {
@@ -85,6 +94,11 @@ ul {
 
 li {
     color: #123C69;
+}
+
+li a:hover {
+    font-weight: bold;
+    color: #AC3B61;
 }
 
 .read-more {
@@ -110,12 +124,23 @@ a {
 }
 
 a:hover {
-    color: #123C69;
     text-decoration: none;
 }
 
 .full-width {
     width: 100%;
+}
+
+.dark {
+    background-color: #f7f9fa;
+}
+
+.first {
+    padding-top: 60px;
+}
+
+.last {
+    padding-bottom: 40px;
 }
 
 /*============================================================================
