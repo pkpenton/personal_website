@@ -60,6 +60,7 @@ h2 {
 h2.job-title {
     font-style: italic;
     font-weight: bold;
+    padding-top: 10px;
 }
 
 h2.company {
@@ -142,6 +143,11 @@ a:hover {
 
 .last {
     padding-bottom: 40px;
+}
+
+.resume li {
+    padding-top: 4px;
+    padding-bottom: 4px;
 }
 
 /*============================================================================
