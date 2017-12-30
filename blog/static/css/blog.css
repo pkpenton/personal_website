@@ -59,6 +59,7 @@ h2 {
 
 h2.job-title {
     font-style: italic;
+    font-weight: bold;
 }
 
 h2.company {
@@ -66,7 +67,7 @@ h2.company {
 }
 
 h2.company a:hover {
-    color: #AC3B61;
+    color: #f44336;
     font-weight: bold;
 }
 
@@ -98,16 +99,16 @@ li {
 
 li a:hover {
     font-weight: bold;
-    color: #AC3B61;
+    color: #f44336;
 }
 
 .read-more {
-    color: #AC3B61;
+    color: #f44336;
 }
 
 .read-more:hover {
     font-weight: bold;
-    color: #AC3B61;
+    color: #f44336;
 }
 
 .blog-h1 {
@@ -115,11 +116,11 @@ li a:hover {
 }
 
 .blog-h1:hover {
-    color: #AC3B61;
+    color: #f44336;
 }
 
 a {
-  color: #AC3B61;
+  color: #f44336;
   text-decoration: none;
 }
 
@@ -132,7 +133,7 @@ a:hover {
 }
 
 .dark {
-    background-color: #f7f9fa;
+    background-color: #f5f5f7;
 }
 
 .first {
@@ -194,11 +195,11 @@ Media queries for mobile and tablet responsiveness
         line-height: 70px;
     }
 
-    .nav-bar ul {
+    .nav-desktop ul {
         bottom: 70px;
     }
 
-    .nav-bar li {
+    .nav-desktop li {
         display: inline-block;
         padding-top: 0;
         padding-left: 10px;
@@ -256,7 +257,11 @@ Media queries for mobile and tablet responsiveness
         text-align: center;
     }
 
-    .nav-bar ul {
+    .mobile-name-block a {
+        color: #123C69;
+    }
+
+    .nav-desktop ul {
         padding-top: 10px;
         text-align: center;
     }
