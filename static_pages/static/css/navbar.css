@@ -37,6 +37,11 @@
 
 .nav-bar a:hover {
     color: #f44336;
+    text-decoration: none;
+}
+
+.nav-desktop {
+    height: 0;
 }
 
 .nav-desktop ul {
