@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('SECRET_KEY', 'not-a-secret')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = bool(os.environ.get('IS_PRODUCTION'))
+DEBUG = not bool(os.environ.get('IS_PRODUCTION'))
 
 ALLOWED_HOSTS = ['127.0.0.1', 'patriciapenton.herokuapp.com']
 
@@ -126,13 +126,6 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR
-
-
-# Extra places for collectstatic to find static files
-
-# STATICFILES_DIRS = (
-#     os.path.join(BASE_DIR, 'static'),
-# )
 
 
 # Simplified static file serving
