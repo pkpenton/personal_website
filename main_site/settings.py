@@ -25,8 +25,7 @@ SECRET_KEY = 'not-a-secret'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-# TODO: add a host when I'm ready to delpoy :)
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1', 'https://patriciapenton.herokuapp.com/']
 
 
 # Application definition
