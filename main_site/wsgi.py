@@ -20,3 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 application = get_wsgi_application()
 
 application = WhiteNoise(application, root=os.path.join(BASE_DIR, '/static/'))
+
+
+def is_immutable_file(self, static_file, url):
+    return False
