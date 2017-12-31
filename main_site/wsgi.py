@@ -19,4 +19,5 @@ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "main_site.settings")
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 application = get_wsgi_application()
 
-application = DjangoWhiteNoise(application, root=os.path.join(BASE_DIR, '/static/'))
+# application = WhiteNoise(application, root=os.path.join(BASE_DIR, '/static/'))
+application = DjangoWhiteNoise(application)
