@@ -1,6 +1,6 @@
 .jumbotron {
     position: relative;
-    background: #000 url("/media/images/ecuador.jpg") center center;
+    background: #000 url("/static/images/ecuador.jpg") center center;
     width: 100%;
     background-size: cover;
     overflow: hidden;
