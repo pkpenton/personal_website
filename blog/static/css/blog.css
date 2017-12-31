@@ -68,8 +68,7 @@ h2.company {
 }
 
 h2.company a:hover {
-    color: #f44336;
-    font-weight: bold;
+    color: #AA2E25;
 }
 
 h3 {
@@ -99,8 +98,7 @@ li {
 }
 
 li a:hover {
-    font-weight: bold;
-    color: #f44336;
+    color: #AA2E25;
 }
 
 .read-more {
@@ -108,8 +106,7 @@ li a:hover {
 }
 
 .read-more:hover {
-    font-weight: bold;
-    color: #f44336;
+    color: #AA2E25;
 }
 
 .blog-h1 {
