@@ -6,11 +6,17 @@
     overflow: hidden;
     text-align: right;
     margin-bottom: 0;
-    height: 93vh;
+    height: 100vh;
+}
+
+.jumbotron .container {
+    position: fixed;
 }
 
 .container {
     width: 960px;
+    right: auto;
+    left: auto;
 }
 
 .display-3 {

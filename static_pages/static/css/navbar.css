@@ -71,10 +71,10 @@ Mobile Nav Bar Hamburger
     position: absolute;
     top: 0;
     right: 0;
-    line-height: 45px;
-    padding: 10px 20px 0 0;
+    line-height: 60px;
+    padding-right: 15px;
     color: #fff;
-    font-size: 0.9em;
+    font-size: 0.7em;
     border: 0;
     cursor: pointer;
     outline: none;
@@ -86,7 +86,7 @@ Mobile Nav Bar Hamburger
     position: absolute;
     top: 0;
     right: 0;
-    padding: 23px 25px 0 20px;
+    padding-right: 15px;
     color: #fff;
     border: 0;
     line-height: 60px;
