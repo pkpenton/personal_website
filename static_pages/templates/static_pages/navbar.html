@@ -8,10 +8,8 @@
         <div class="nav-desktop">
             <ul>
                 <li><a href="/">Home</a></li>|
-                <li><a href="/resume/">R&eacute;sum&eacute;</a></li>|
-                <li><a href="{% url 'post_list' %}">Blog</a></li>
-                <!-- TODO: add link to games page -->
-                <!-- <li><a href="???">Games</a></li> -->
+                <li><a href="/resume/">R&eacute;sum&eacute;</a></li>
+                <!-- <li><a href="{% url 'post_list' %}">Blog</a></li> -->
             </ul>
         </div>
     </div>
@@ -19,16 +17,14 @@
     <div class="mobile-name-block hide-for-desktop hide-for-tablet">
         Patricia Penton
     </div>
-    <div>
+    <div class="hide-for-desktop hide-for-tablet">
         <button class="hamburger">&#9776;</button>
         <button class="x">&#735;</button>
         <div class="menu">
             <ul>
                 <a href="/"><li>Home</li></a>
                 <a href="/resume/"><li>R&eacute;sum&eacute;</li></a>
-                <a href="{% url 'post_list' %}"><li>Blog</li></a>
-                <!-- TODO: add link to games page -->
-                <!-- <li><a href="???">Games</a></li> -->
+                <!-- <a href="{% url 'post_list' %}"><li>Blog</li></a> -->
             </ul>
         </div>
     </div>
