@@ -264,7 +264,8 @@ Media queries for mobile and tablet responsiveness
         background-color: #123C69;
         color: #fff;
         font-family: 'Amatic SC', serif;
-        text-align: center;
+        text-align: left;
+        padding-left: 15px;
     }
 
     .mobile-name-block a {
