@@ -9,14 +9,8 @@
     height: 100vh;
 }
 
-.jumbotron .container {
-    position: fixed;
-}
-
 .container {
     width: 960px;
-    right: auto;
-    left: auto;
 }
 
 .display-3 {
