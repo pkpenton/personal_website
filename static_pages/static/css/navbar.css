@@ -73,6 +73,7 @@ Mobile Nav Bar Hamburger
     right: 0;
     line-height: 60px;
     padding-right: 15px;
+    padding-top: 5px;
     color: #fff;
     font-size: 2em;
     border: 0;
@@ -87,7 +88,7 @@ Mobile Nav Bar Hamburger
     top: 0;
     right: 0;
     padding-right: 15px;
-    padding-top: 5px;
+    padding-top: 15px;
     color: #fff;
     border: 0;
     line-height: 60px;
