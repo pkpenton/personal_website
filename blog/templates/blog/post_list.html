@@ -10,34 +10,31 @@
                             {{ post.published_date }}
                         </p>
                         <h1>
-                            <a class="blog-h1" href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a>
+                            {% if post.medium_post %}
+                                <a class="blog-h1" href="{{ post.medium_url }}" target="_blank">{{ post.title }}</a>
+                            {% else %}
+                                <a class="blog-h1" href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a>
+                            {% endif %}
                         </h1>
                     </div>
                 </div>
 
                 <div class="row">
-                    {% if post.list_image %}
                     <div class="col-xs-3">
                             <img class="full-width" src="{{ post.list_image.url }}" alt="Blog post image">
                     </div>
                     <div class="col-xs-9">
                         <p>
                             {% autoescape off %}
-                            {{ post.text_preview|linebreaksbr|truncatechars:300 }}
-                            <a class="read-more" href="{% url 'post_detail' pk=post.pk %}">read more</a>
+                            {{ post.text_preview|linebreaksbr|truncatechars:200 }}
+                            {% if post.medium_post %}
+                                <a class="read-more" href="{{ post.medium_url }}" target="_blank">read more on Medium</a>
+                            {% else %}
+                                <a class="read-more" href="{% url 'post_detail' pk=post.pk %}">read more</a>
+                            {% endif %}
                             {% endautoescape %}
                         </p>
                     </div>
-                    {% else %}
-                    <div class="col-xs-12">
-                        <p>
-                            {% autoescape off %}
-                            {{ post.text_preview|linebreaksbr|truncatechars:300 }}
-                            <a class="read-more" href="{% url 'post_detail' pk=post.pk %}">read more</a>
-                            {% endautoescape %}
-                        </p>
-                    </div>
-                    {% endif %}
                 </div>
 
                 {% if not forloop.last %}
