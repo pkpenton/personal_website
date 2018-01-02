@@ -1,29 +1,31 @@
 {% extends 'blog/blog_base.html' %}
 
 {% block content %}
-    <div class="body-container site-content first">
-        <div class="page-content">
-            {% for post in posts %}
+    {% for post in posts %}
+    <div class="{% cycle 'light-blog' 'dark-blog' %} {% if forloop.first %}first{% endif %} {% if forloop.last %}last{% endif %}">
+        <div class="body-container site-content">
+
+            <div class="page-content">
                 <div class="row">
                     <div class="col-xs-12">
-                        <p>
-                            {{ post.published_date }}
+                        <p class="blog-date">
+                            {{ post.published_date.date }}
                         </p>
-                        <h1>
+                        <h1 class="blog-h1">
                             {% if post.medium_post %}
-                                <a class="blog-h1" href="{{ post.medium_url }}" target="_blank">{{ post.title }}</a>
+                                <a href="{{ post.medium_url }}" target="_blank">{{ post.title }}</a>
                             {% else %}
-                                <a class="blog-h1" href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a>
+                                <a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a>
                             {% endif %}
                         </h1>
                     </div>
                 </div>
 
                 <div class="row">
-                    <div class="col-xs-3">
+                    <div class="col-xs-">
                             <img class="full-width" src="{{ post.list_image.url }}" alt="Blog post image">
                     </div>
-                    <div class="col-xs-9">
+                    <div class="col-xs-8">
                         <p>
                             {% autoescape off %}
                             {{ post.text_preview|linebreaksbr|truncatechars:200 }}
@@ -37,10 +39,8 @@
                     </div>
                 </div>
 
-                {% if not forloop.last %}
-                    <hr>
-                {% endif %}
-            {% endfor %}
+            </div>
         </div>
     </div>
+    {% endfor %}
 {% endblock %}
