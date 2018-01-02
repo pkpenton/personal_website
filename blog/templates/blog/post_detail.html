@@ -10,7 +10,9 @@
                 </p>
             {% endif %}
             <h1>{{ post.title }}</h1>
-            <p>{{ post.text|linebreaksbr }}</p>
+            {% autoescape off %}
+                {{ post.text|linebreaksbr }}
+            {% endautoescape %}
         </div>
     </div>
 </div>
