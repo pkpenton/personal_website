@@ -133,7 +133,7 @@ MEDIA_ROOT = BASE_DIR
 # uploading images with wysiwyg editor
 
 CKEDITOR_UPLOAD_PATH = 'uploads/'
-# CKEDITOR_FILENAME_GENERATOR = 'utils.get_filename'
+AWS_QUERYSTRING_AUTH = False
 
 
 # STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
