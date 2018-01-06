@@ -30,6 +30,9 @@ DEBUG = not bool(os.environ.get('IS_PRODUCTION'))
 ALLOWED_HOSTS = ['127.0.0.1', 'patriciapenton.herokuapp.com', 'patriciapenton.com']
 
 SESSION_COOKIE_SECURE = True
+X_FRAME_OPTIONS = 'DENY'
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
 
 # Application definition
 
@@ -90,6 +93,9 @@ DATABASES = {
 #     DATABASE_URL = os.environ.get('DATABASE_URL')
 #     db_from_env = dj_database_url.config(DATABASE_URL, conn_max_age=600)
 #     DATABASES['default'].update(db_from_env)
+
+db_from_env = dj_database_url.config(conn_max_age=600)
+DATABASES['default'].update(db_from_env)
 
 
 # Password validation
