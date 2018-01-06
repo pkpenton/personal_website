@@ -42,8 +42,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'blog',
     'static_pages',
-    'ckeditor',
-    'ckeditor_uploader',
 ]
 
 MIDDLEWARE = [
@@ -54,6 +52,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # Simplified static file serving
+    # https://warehouse.python.org/project/whitenoise/
+    # 'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'main_site.urls'
@@ -130,11 +131,8 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR
 
 
-# uploading images with wysiwyg editor
-
-CKEDITOR_UPLOAD_PATH = 'uploads/'
-AWS_QUERYSTRING_AUTH = False
-
+# Simplified static file serving
+# https://warehouse.python.org/project/whitenoise/
 
 # STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
