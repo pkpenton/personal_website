@@ -112,11 +112,12 @@ li a:hover {
     text-decoration: underline;
 }
 
-.blog-h1 {
+.blog-h1 a {
     color: #123C69;
+    margin-top: 15px;
 }
 
-.blog-h1:hover {
+.blog-h1 a:hover {
     color: #f44336;
 }
 
@@ -129,8 +130,29 @@ a:hover {
     text-decoration: none;
 }
 
+p a:hover {
+    color: #f44336;
+    text-decoration: underline;
+}
+
 .full-width {
     width: 100%;
+}
+
+.blog-date {
+    font-size: 16px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.light-blog {
+    background-color: #fff;
+    padding-bottom: 30px;
+}
+
+.dark-blog {
+    background-color: #f5f5f7;
+    padding-bottom: 30px;
 }
 
 .dark {
