@@ -30,9 +30,6 @@ DEBUG = not bool(os.environ.get('IS_PRODUCTION'))
 ALLOWED_HOSTS = ['127.0.0.1', 'patriciapenton.herokuapp.com', 'patriciapenton.com']
 
 SESSION_COOKIE_SECURE = True
-X_FRAME_OPTIONS = 'DENY'
-CSRF_COOKIE_SECURE = True
-SESSION_COOKIE_SECURE = True
 
 # Application definition
 
@@ -56,9 +53,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    # Simplified static file serving
-    # https://warehouse.python.org/project/whitenoise/
-    # 'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'main_site.urls'
