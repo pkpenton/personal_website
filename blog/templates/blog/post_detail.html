@@ -5,14 +5,12 @@
     <div class="page-content">
         <div>
             {% if post.published_date %}
-                <p class="blog-date">
-                    {{ post.published_date.date }}
+                <p>
+                    {{ post.published_date }}
                 </p>
             {% endif %}
             <h1>{{ post.title }}</h1>
-            {% autoescape off %}
-                {{ post.text|linebreaksbr }}
-            {% endautoescape %}
+            <p>{{ post.text|linebreaksbr }}</p>
         </div>
     </div>
 </div>

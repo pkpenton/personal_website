@@ -3,18 +3,14 @@ from __future__ import unicode_literals
 from django.db import models
 from django.utils import timezone
 
-from ckeditor_uploader.fields import RichTextUploadingField
-
 
 class Post(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.DO_NOTHING)
     title = models.CharField(max_length=200)
-    text = RichTextUploadingField()
-    text_preview = models.TextField(blank=True, null=True)
+    text = models.TextField()
     created_date = models.DateTimeField(default=timezone.now)
     published_date = models.DateTimeField(blank=True, null=True)
-    list_image = models.ImageField(upload_to='images/', blank=True, null=True)
-    medium_post = models.BooleanField(default=False)
+    image = models.ImageField(upload_to='images/', blank=True, null=True)
     medium_url = models.URLField(blank=True, null=True)
 
     def publish(self):
