@@ -27,8 +27,12 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'not-a-secret')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = not bool(os.environ.get('IS_PRODUCTION'))
 
-ALLOWED_HOSTS = ['127.0.0.1', 'patriciapenton.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'patriciapenton.herokuapp.com', 'patriciapenton.com']
 
+SESSION_COOKIE_SECURE = True
+X_FRAME_OPTIONS = 'DENY'
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
 
 # Application definition
 
@@ -88,8 +92,10 @@ DATABASES = {
     }
 }
 
-db_from_env = dj_database_url.config(conn_max_age=600)
-DATABASES['default'].update(db_from_env)
+# if bool(os.environ.get('IS_PRODUCTION')):
+#     DATABASE_URL = os.environ.get('DATABASE_URL')
+#     db_from_env = dj_database_url.config(DATABASE_URL, conn_max_age=600)
+#     DATABASES['default'].update(db_from_env)
 
 
 # Password validation
