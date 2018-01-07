@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'blog',
     'static_pages',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -139,9 +140,22 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR
 
+AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+AWS_STORAGE_BUCKET_NAME = 'patricia-penton'
+
+AWS_S3_OBJECT_PARAMETERS = {
+    'CacheControl': 'max-age=86400',
+}
+
+if bool(os.environ.get('IS_PRODUCTION')):
+    DEFAULT_FILE_STORAGE = 'main_site.storage_backends.MediaStorage'
+
 
 # Simplified static file serving
 # https://warehouse.python.org/project/whitenoise/
 
-# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+if not bool(os.environ.get('IS_PRODUCTION')):
+    STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+elif bool(os.environ.get('IS_PRODUCTION')):
+    STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
