@@ -90,11 +90,6 @@ DATABASES = {
     }
 }
 
-# if bool(os.environ.get('IS_PRODUCTION')):
-#     DATABASE_URL = os.environ.get('DATABASE_URL')
-#     db_from_env = dj_database_url.config(DATABASE_URL, conn_max_age=600)
-#     DATABASES['default'].update(db_from_env)
-
 db_from_env = dj_database_url.config(conn_max_age=600)
 DATABASES['default'].update(db_from_env)
 
@@ -139,20 +134,20 @@ if not bool(os.environ.get('IS_PRODUCTION')):
     STATIC_URL = '/static/'
     STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 elif bool(os.environ.get('IS_PRODUCTION')):
-    STATIC_URL = 'https://patriciapenton.s3.amazonaws.com/static/'
-    STATIC_ROOT = 'https://patriciapenton.s3.amazonaws.com/static/'
+    STATIC_URL = 'https://patricia-penton.s3.amazonaws.com/static/'
+    STATIC_ROOT = 'https://patricia-penton.s3.amazonaws.com/static/'
 
 if not bool(os.environ.get('IS_PRODUCTION')):
     MEDIA_URL = '/media/'
     MEDIA_ROOT = BASE_DIR
 elif bool(os.environ.get('IS_PRODUCTION')):
-    MEDIA_URL = 'https://patriciapenton.s3.amazonaws.com/media/'
-    MEDIA_ROOT = 'https://patriciapenton.s3.amazonaws.com/media/'
+    MEDIA_URL = 'https://patricia-penton.s3.amazonaws.com/media/'
+    MEDIA_ROOT = 'https://patricia-penton.s3.amazonaws.com/media/'
 
 AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
 AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
 AWS_STORAGE_BUCKET_NAME = 'patricia-penton'
-AWS_S3_CUSTOM_DOMAIN = 'patriciapenton.s3.amazonaws.com'
+AWS_S3_CUSTOM_DOMAIN = 'patricia-penton.s3.amazonaws.com'
 
 AWS_S3_OBJECT_PARAMETERS = {
     'CacheControl': 'max-age=86400',
