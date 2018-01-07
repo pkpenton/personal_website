@@ -135,14 +135,24 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
-STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR
+if not bool(os.environ.get('IS_PRODUCTION')):
+    STATIC_URL = '/static/'
+    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+elif bool(os.environ.get('IS_PRODUCTION')):
+    STATIC_URL = 'https://patriciapenton.s3.amazonaws.com/static/'
+    STATIC_ROOT = 'https://patriciapenton.s3.amazonaws.com/static/'
+
+if not bool(os.environ.get('IS_PRODUCTION')):
+    MEDIA_URL = '/media/'
+    MEDIA_ROOT = BASE_DIR
+elif bool(os.environ.get('IS_PRODUCTION')):
+    MEDIA_URL = 'https://patriciapenton.s3.amazonaws.com/media/'
+    MEDIA_ROOT = 'https://patriciapenton.s3.amazonaws.com/media/'
 
 AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
 AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
 AWS_STORAGE_BUCKET_NAME = 'patricia-penton'
+AWS_S3_CUSTOM_DOMAIN = 'patriciapenton.s3.amazonaws.com'
 
 AWS_S3_OBJECT_PARAMETERS = {
     'CacheControl': 'max-age=86400',
@@ -150,10 +160,6 @@ AWS_S3_OBJECT_PARAMETERS = {
 
 if bool(os.environ.get('IS_PRODUCTION')):
     DEFAULT_FILE_STORAGE = 'main_site.storage_backends.MediaStorage'
-
-
-# Simplified static file serving
-# https://warehouse.python.org/project/whitenoise/
 
 if not bool(os.environ.get('IS_PRODUCTION')):
     STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
