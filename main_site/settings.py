@@ -134,15 +134,15 @@ if not bool(os.environ.get('IS_PRODUCTION')):
     STATIC_URL = '/static/'
     STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 elif bool(os.environ.get('IS_PRODUCTION')):
-    STATIC_URL = 'https://patricia-penton.s3.amazonaws.com/static/'
-    STATIC_ROOT = 'https://patricia-penton.s3.amazonaws.com/static/'
+    STATIC_URL = 'https://patricia-penton.s3.amazonaws.com/'
+    STATIC_ROOT = 'https://patricia-penton.s3.amazonaws.com/'
 
 if not bool(os.environ.get('IS_PRODUCTION')):
     MEDIA_URL = '/media/'
     MEDIA_ROOT = BASE_DIR
 elif bool(os.environ.get('IS_PRODUCTION')):
-    MEDIA_URL = 'https://patricia-penton.s3.amazonaws.com/media/'
-    MEDIA_ROOT = 'https://patricia-penton.s3.amazonaws.com/media/'
+    MEDIA_URL = 'https://patricia-penton.s3.amazonaws.com/'
+    MEDIA_ROOT = 'https://patricia-penton.s3.amazonaws.com/'
 
 AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
 AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
