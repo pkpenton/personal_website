@@ -1,6 +1,6 @@
 .jumbotron {
     position: relative;
-    background: #000 url("images/ecuador.jpg") center center;
+    background: #000 url("https://patricia-penton.s3.amazonaws.com/images/ecuador.jpg") center center;
     width: 100%;
     background-size: cover;
     overflow: hidden;
