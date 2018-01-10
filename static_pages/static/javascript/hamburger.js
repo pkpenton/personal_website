@@ -4,14 +4,14 @@ $(document).ready(function() {
     $(".menu").hide();
 
     $(".hamburger").click(function() {
-        $(".menu").slideToggle("medium", function() {
+        $(".menu").slideToggle("fast", function() {
             $(".hamburger").hide();
             $(".x").show();
         });
     });
 
     $(".x").click(function() {
-        $(".menu").slideToggle("medium", function() {
+        $(".menu").slideToggle("fast", function() {
             $(".x").hide();
             $(".hamburger").show();
         });
