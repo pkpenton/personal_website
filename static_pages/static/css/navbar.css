@@ -14,7 +14,7 @@
     height: 70px;
     left: 0;
     margin: 0 auto;
-    position: fixed;
+    position: relative;
     right: 0;
     top: 0;
     width: 960px;
@@ -87,8 +87,8 @@ Mobile Nav Bar Hamburger
     position: absolute;
     top: 0;
     right: 0;
-    padding-right: 15px;
-    padding-top: 10px;
+    padding-right: 20px;
+    padding-top: 12px;
     color: #fff;
     border: 0;
     line-height: 60px;
@@ -106,8 +106,7 @@ Mobile Nav Bar Hamburger
     background: #D8D8D8;
     position: absolute;
     text-align: center;
-    font-size: 12px;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Amatic SC', serif;
 }
 
 .menu ul {
@@ -115,8 +114,7 @@ Mobile Nav Bar Hamburger
     padding: 0;
     list-style-type: none;
     list-style-image: none;
-    font-size: 30px;
-    font-weight: lighter;
+    font-size: 38px;
 }
 
 .menu li {

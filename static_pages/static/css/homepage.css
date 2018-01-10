@@ -31,3 +31,9 @@ p.jumbo-subheader {
     font-size: 33px;
     color: black;
 }
+
+.welcome-message {
+    position: fixed;
+    width: inherit;
+    padding-right: 20px;
+}

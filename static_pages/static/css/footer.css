@@ -21,5 +21,6 @@
 }
 
 .sticky-footer a:hover {
-    color: #f44336;
+    text-decoration: none;
+    background: url('images/github.png');
 }
