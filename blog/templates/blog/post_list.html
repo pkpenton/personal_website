@@ -28,7 +28,7 @@
                     <div class="col-xs-8">
                         <p>
                             {% autoescape off %}
-                            {{ post.text_preview|linebreaksbr|truncatechars:250 }}
+                            {{ post.text_preview|linebreaksbr|truncatechars:260 }}
                             {% if post.medium_post %}
                                 <a class="read-more" href="{{ post.medium_url }}" target="_blank">read more on Medium</a>
                             {% else %}

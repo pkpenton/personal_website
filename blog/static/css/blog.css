@@ -85,7 +85,7 @@ h3.pi {
 
 p {
     line-height: 1.5;
-    padding: 10px 0;
+    /*padding: 10px 0;*/
     font-family: 'Quicksand', sans-serif;
     color: #123C69;
 }
@@ -117,11 +117,11 @@ h1.blog-h1 {
 }
 
 h1.blog-h1 a {
-    color: #f44336;
+    color: #123C69;
 }
 
 h1.blog-h1 a:hover {
-    color: #f44336;
+    color: #123C69;
     text-decoration: underline;
 }
 
@@ -131,6 +131,7 @@ a {
 }
 
 a:hover {
+    color: #f44336;
     text-decoration: none;
 }
 
