@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'blog',
     'static_pages',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -89,11 +90,6 @@ DATABASES = {
     }
 }
 
-# if bool(os.environ.get('IS_PRODUCTION')):
-#     DATABASE_URL = os.environ.get('DATABASE_URL')
-#     db_from_env = dj_database_url.config(DATABASE_URL, conn_max_age=600)
-#     DATABASES['default'].update(db_from_env)
-
 db_from_env = dj_database_url.config(conn_max_age=600)
 DATABASES['default'].update(db_from_env)
 
@@ -134,14 +130,33 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
-STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR
+if not bool(os.environ.get('IS_PRODUCTION')):
+    STATIC_URL = '/static/'
+    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+elif bool(os.environ.get('IS_PRODUCTION')):
+    STATIC_URL = 'https://patricia-penton.s3.amazonaws.com/'
+    STATIC_ROOT = 'https://patricia-penton.s3.amazonaws.com/'
 
+if not bool(os.environ.get('IS_PRODUCTION')):
+    MEDIA_URL = '/media/'
+    MEDIA_ROOT = BASE_DIR
+elif bool(os.environ.get('IS_PRODUCTION')):
+    MEDIA_URL = 'https://patricia-penton.s3.amazonaws.com/'
+    MEDIA_ROOT = 'https://patricia-penton.s3.amazonaws.com/'
 
-# Simplified static file serving
-# https://warehouse.python.org/project/whitenoise/
+AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+AWS_STORAGE_BUCKET_NAME = 'patricia-penton'
+AWS_S3_CUSTOM_DOMAIN = 'patricia-penton.s3.amazonaws.com'
 
-# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+AWS_S3_OBJECT_PARAMETERS = {
+    'CacheControl': 'max-age=86400',
+}
+
+if bool(os.environ.get('IS_PRODUCTION')):
+    DEFAULT_FILE_STORAGE = 'main_site.storage_backends.MediaStorage'
+
+if not bool(os.environ.get('IS_PRODUCTION')):
+    STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+elif bool(os.environ.get('IS_PRODUCTION')):
+    STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
