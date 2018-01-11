@@ -322,15 +322,15 @@ Media queries for mobile and tablet responsiveness
     }
 
     h1.display-3 {
-        font-size: 58px;
+        font-size: 53px;
     }
 
     p.jumbo-subheader {
-        font-size: 30px;
+        font-size: 28px;
     }
 
     .welcome-message {
         width: -webkit-fill-available;
-        padding-right: 40px;
+        padding-right: 25px;
     }
 }
