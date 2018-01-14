@@ -318,7 +318,7 @@ Media queries for mobile and tablet responsiveness
     }
 
     .display-3 {
-        margin-top: 70px;
+        margin-top: 60px;
     }
 
     h1.display-3 {
@@ -330,8 +330,8 @@ Media queries for mobile and tablet responsiveness
     }
 
     .welcome-message {
-        width: 380px;
-        /*padding-right: 25px;*/
+        width: -webkit-fill-available;
+        padding-right: 20px;
     }
 
     .full-width {
