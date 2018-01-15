@@ -1,5 +1,16 @@
 {% extends 'blog/blog_base.html' %}
 
+{% block ogtags %}
+    <meta property="og:image" content="{{ post.list_image.url }}"/>
+    <meta property="og:title" content="{{ post.title }}"/>
+    <meta property="og:description" content="Patricia Penton Blog"/>
+
+    <meta name="twitter:card" value="summary_large_image"/>
+    <meta name="twitter:image" content="{{ post.list_image.url }}"/>
+    <meta name="twitter:title" content="{{ post.title }}"/>
+    <meta name="twitter:description" content="Patricia Penton Blog"/>
+{% endblock %}
+
 {% block content %}
 <div class="body-container site-content first">
     <div class="page-content">
