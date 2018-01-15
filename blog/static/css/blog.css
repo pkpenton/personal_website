@@ -190,6 +190,10 @@ code {
     font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
+.blog-detail {
+    padding-bottom: 25px;
+}
+
 /*============================================================================
 Media queries for mobile and tablet responsiveness
 ============================================================================*/
