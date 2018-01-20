@@ -51,8 +51,6 @@ INSTALLED_APPS = [
     'blog',
     'static_pages',
     'storages',
-    'ckeditor',
-    'ckeditor_uploader'
 ]
 
 MIDDLEWARE = [
@@ -136,12 +134,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
-if not bool(os.environ.get('IS_PRODUCTION')):
-    CKEDITOR_UPLOAD_PATH = 'uploads/'
-elif bool(os.environ.get('IS_PRODUCTION')):
-    CKEDITOR_UPLOAD_PATH = 'https://patricia-penton.s3.amazonaws.com/uploads/'
-
-AWS_QUERYSTRING_AUTH = False
+# AWS_QUERYSTRING_AUTH = False
 
 if not bool(os.environ.get('IS_PRODUCTION')):
     STATIC_URL = '/static/'
