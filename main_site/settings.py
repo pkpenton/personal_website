@@ -31,8 +31,12 @@ ALLOWED_HOSTS = ['127.0.0.1', 'patriciapenton.herokuapp.com', 'patriciapenton.co
 
 SESSION_COOKIE_SECURE = True
 X_FRAME_OPTIONS = 'DENY'
-CSRF_COOKIE_SECURE = True
-SESSION_COOKIE_SECURE = True
+if not bool(os.environ.get('IS_PRODUCTION')):
+    CSRF_COOKIE_SECURE = False
+    SESSION_COOKIE_SECURE = False
+elif bool(os.environ.get('IS_PRODUCTION')):
+    CSRF_COOKIE_SECURE = True
+    SESSION_COOKIE_SECURE = True
 
 # Application definition
 
