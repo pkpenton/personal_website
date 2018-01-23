@@ -14,16 +14,18 @@
 {% block content %}
 <div class="body-container site-content first">
     <div class="page-content">
-        <div class="blog-detail">
-            {% if post.published_date %}
-                <p class="blog-date">
-                    {{ post.published_date.date }}
-                </p>
-            {% endif %}
-            <h1>{{ post.title }}</h1>
-            {% autoescape off %}
-                {{ post.text|linebreaksbr }}
-            {% endautoescape %}
+        <div class="row blog-detail">
+            <div class="col-xs-12">
+                {% if post.published_date %}
+                    <p class="blog-date">
+                        {{ post.published_date.date }}
+                    </p>
+                {% endif %}
+                <h1>{{ post.title }}</h1>
+                {% autoescape off %}
+                    {{ post.text|linebreaksbr }}
+                {% endautoescape %}
+            </div>
         </div>
     </div>
 </div>
