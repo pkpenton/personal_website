@@ -195,6 +195,12 @@ code {
     color: #123C69;
 }
 
+.goals-binder {
+    float: right;
+    margin: 5px;
+    width: 300px;
+}
+
 /*============================================================================
 Media queries for mobile and tablet responsiveness
 ============================================================================*/
@@ -345,5 +351,11 @@ Media queries for mobile and tablet responsiveness
 
     .full-width {
         margin-bottom: 20px;
+    }
+
+    .goals-binder {
+        margin: 5px;
+        width: inherit;
+        padding-bottom: 15px;
     }
 }
