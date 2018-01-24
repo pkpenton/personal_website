@@ -193,8 +193,6 @@ code {
 .blog-detail {
     padding-bottom: 25px;
     color: #123C69;
-    margin-left: 0;
-    margin-right: 0;
 }
 
 /*============================================================================
@@ -288,6 +286,10 @@ Media queries for mobile and tablet responsiveness
     .body-container {
         width: 300px;
         margin-top: 70px;
+    }
+
+    .page-content {
+        width: 300px;
     }
 
     #nav-bar-container {
