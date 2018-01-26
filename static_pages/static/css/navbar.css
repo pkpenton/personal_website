@@ -22,6 +22,8 @@
 }
 
 .name-block {
+    position: relative;
+    width: 50%;
     color: #fff;
     font-family: 'Amatic SC', serif;
     font-size: 38px;
@@ -124,7 +126,6 @@ Mobile Nav Bar Hamburger
 }
 
 .menu li:hover {
-    background: #9e9e9e;
     cursor: pointer;
 }
 

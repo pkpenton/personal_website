@@ -7,15 +7,16 @@ name = "pypi"
 
 [dev-packages]
 
+django-ckeditor = "*"
 
 
 [packages]
 
-Django = "*"
+django = "*"
 gunicorn = "*"
 django-heroku = "*"
 whitenoise = "*"
 dj-database-url = "*"
 "boto3" = "*"
 django-storages = "*"
-Pillow = "*"
+pillow = "*"
