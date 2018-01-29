@@ -1,5 +1,16 @@
 {% extends 'blog/blog_base.html' %}
 
+{% block ogtags %}
+    <meta property="og:image" content="http://patricia-penton.s3.amazonaws.com/images/ecuador_og.jpg"/>
+    <meta property="og:title" content="Patricia Penton's Blog"/>
+    <meta property="og:description" content="Software Engineer with a passion for learning new technologies."/>
+
+    <meta name="twitter:card" value="summary"/>
+    <meta name="twitter:image" content="http://patricia-penton.s3.amazonaws.com/images/profile_pic.jpg"/>
+    <meta name="twitter:title" content="Patricia Penton's Blog"/>
+    <meta name="twitter:description" content="Software Engineer with a passion for learning new technologies."/>
+{% endblock %}
+
 {% block content %}
     {% for post in posts %}
     <div class="{% cycle 'light-blog' 'dark-blog' %} {% if forloop.first %}first{% endif %} {% if forloop.last %}last{% endif %}">
