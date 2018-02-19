@@ -1,0 +1,20 @@
+{% extends 'static_pages/base.html' %}
+
+{% block title %}
+    Patricia Penton
+{% endblock %}
+
+{% block ogtags %}
+    <meta property="og:image" content="http://patricia-penton.s3.amazonaws.com/images/ecuador_og.jpg"/>
+    <meta property="og:title" content="Patricia Penton"/>
+    <meta property="og:description" content="Hello, World!"/>
+
+    <meta name="twitter:card" value="summary_large_image"/>
+    <meta name="twitter:image" content="http://patricia-penton.s3.amazonaws.com/images/ecuador_og.jpg"/>
+    <meta name="twitter:title" content="Patricia Penton"/>
+    <meta name="twitter:description" content="Hello, World!"/>
+{% endblock %}
+
+{% block content %}
+    {% include "static_pages/about.html" %}
+{% endblock %}
