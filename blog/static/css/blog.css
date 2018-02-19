@@ -35,6 +35,14 @@ body {
     font-family: 'Quicksand', sans-serif;
 }
 
+.extra-margin {
+    margin-bottom: 30px;
+}
+
+.publications p {
+    margin-bottom: 20px;
+}
+
 hr {
     display: block;
     border-style: solid;
@@ -171,9 +179,9 @@ p.blog-date {
     padding-bottom: 40px;
 }
 
-.resume li {
-    padding-top: 4px;
-    padding-bottom: 4px;
+.fun-facts-list li {
+    padding-top: 6px;
+    padding-bottom: 6px;
 }
 
 .journal-title {
@@ -205,6 +213,28 @@ code {
     padding: 2px;
 }
 
+.emphasis {
+    color: #f44336;
+}
+
+.halloween-desktop {
+    margin-bottom: 30px;
+    padding-left: 0;
+}
+
+.quote {
+    text-align: center;
+}
+
+.hello-world p {
+    padding-bottom: 15px;
+}
+
+.static-content-list li {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
 /*============================================================================
 Media queries for mobile and tablet responsiveness
 ============================================================================*/
@@ -212,10 +242,18 @@ Media queries for mobile and tablet responsiveness
     .hide-for-desktop {
         display: none;
     }
+
+    .special-tablet {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 980px) {
     .hide-for-desktop {
+        display: none;
+    }
+
+    .special-tablet {
         display: none;
     }
 
@@ -237,9 +275,13 @@ Media queries for mobile and tablet responsiveness
         display: none;
     }
 
+    .special-tablet {
+        display: inherit;
+    }
+
     .body-container {
         width: 600px;
-        margin-top: 120px;
+        margin-top: 60px;
     }
 
     #nav-bar-container {
@@ -286,6 +328,10 @@ Media queries for mobile and tablet responsiveness
 
 @media screen and (max-width: 640px) {
     .hide-for-mobile {
+        display: none;
+    }
+
+    .special-tablet {
         display: none;
     }
 

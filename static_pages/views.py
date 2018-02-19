@@ -9,3 +9,7 @@ def homepage(request):
 
 def resume(request):
     return render(request, 'static_pages/resume.html')
+
+
+def about(request):
+    return render(request, 'static_pages/about.html')
