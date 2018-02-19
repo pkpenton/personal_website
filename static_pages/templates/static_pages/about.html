@@ -1,43 +1,61 @@
+{% extends 'static_pages/base.html' %}
+
 {% load staticfiles%}
 
-<div id="about">
-    <div class="body-container site-content first">
-        <div class="page-content">
-            <div class="row">
-                <div class="col-xs-12 hello-world">
-                    <h1>Hello, World! 👋</h1>
-                    <p>
-                        <span class="emphasis">I'm an energetic and outgoing Software Engineer with a
-                        never-ending thirst for knowledge.</span> Before learning my first programming
-                        language, I held successful positions as a community organizer for a political
-                        nonprofit organization, and a microbiologist for academic and government
-                        research institutions.
-                    </p>
-                    <p>
-                        In all of these roles, I found myself performing necessary
-                        but monotonous tasks that consumed much of my time. Determined to never spend hours
-                        staring at a spreadsheet again, I decided to learn how to build web applications
-                        to automate repetitive tasks.
-                    </p>
-                    <p>
-                        The first thing I built was a web application that helped our team coordinator organize
-                        groups for team lunch. The app consisted of a form that collected two lists of email addresses.
-                        Upon submitting the form, the two lists were merged, randomized, and split
-                        into small groups using Python.
-                    </p>
-                    <p>
-                        My lunch group organizer app took a time-consuming task and reduced it
-                        to the click of a button. I was hooked - I fell in love with software development.
-                        I now work as a software engineer, building internal tools for the amazing personal
-                        genetics company, 23andMe. <span class="emphasis">My favorite web applications
-                        to build are those that make someone's life easier by helping them do
-                        their job more efficiently.</span>
-                    </p>
+{% block title %}
+    About Me | Patricia Penton
+{% endblock %}
+
+{% block ogtags %}
+    <meta property="og:image" content="http://patricia-penton.s3.amazonaws.com/images/ecuador_og.jpg"/>
+    <meta property="og:title" content="Patricia Penton"/>
+    <meta property="og:description" content="Hello, World!"/>
+
+    <meta name="twitter:card" value="summary_large_image"/>
+    <meta name="twitter:image" content="http://patricia-penton.s3.amazonaws.com/images/ecuador_og.jpg"/>
+    <meta name="twitter:title" content="Patricia Penton"/>
+    <meta name="twitter:description" content="Hello, World!"/>
+{% endblock %}
+
+{% block content %}
+    <div id="about">
+        <div class="body-container site-content first">
+            <div class="page-content">
+                <div class="row">
+                    <div class="col-xs-12 hello-world">
+                        <h1>Hello, World! 👋</h1>
+                        <p>
+                            <span class="emphasis">I'm an energetic and outgoing Software Engineer with a
+                            never-ending thirst for knowledge.</span> Before learning my first programming
+                            language, I held successful positions as a community organizer for a political
+                            nonprofit organization, and a microbiologist for academic and government
+                            research institutions.
+                        </p>
+                        <p>
+                            In all of these roles, I found myself performing necessary
+                            but monotonous tasks that consumed much of my time. Determined to never spend hours
+                            staring at a spreadsheet again, I decided to learn how to build web applications
+                            to automate repetitive tasks.
+                        </p>
+                        <p>
+                            The first thing I built was a web application that helped our team coordinator organize
+                            groups for team lunch. The app consisted of a form that collected two lists of email addresses.
+                            Upon submitting the form, the two lists were merged, randomized, and split
+                            into small groups using Python.
+                        </p>
+                        <p>
+                            My lunch group organizer app took a time-consuming task and reduced it
+                            to the click of a button. I was hooked - I fell in love with software development.
+                            I now work as a software engineer, building internal tools for the amazing personal
+                            genetics company, 23andMe. <span class="emphasis">My favorite web applications
+                            to build are those that make someone's life easier by helping them do
+                            their job more efficiently.</span>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
     <div class="dark">
         <div class="body-container site-content">
@@ -173,3 +191,5 @@
             </div>
         </div>
     </div>
+
+{% endblock %}

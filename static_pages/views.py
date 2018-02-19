@@ -12,4 +12,4 @@ def resume(request):
 
 
 def about(request):
-    return render(request, 'static_pages/about-full.html')
+    return render(request, 'static_pages/about.html')
