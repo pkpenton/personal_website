@@ -1,6 +1,7 @@
 {% extends 'blog/blog_base.html' %}
 
 {% block ogtags %}
+    <meta property="og:url" content="https://patriciapenton.herokuapp.com{% url 'post_detail' pk=post.pk %}"/>
     <meta property="og:image" content="{{ post.list_image.url }}"/>
     <meta property="og:title" content="{{ post.title }}"/>
     <meta property="og:description" content="Patricia Penton's Blog"/>
@@ -42,7 +43,8 @@
         {% if not post.medium_post %}
             <hr>
 
-            <div class="col-xs-12 fb-comments" data-href="http://127.0.0.1:8000{% url 'post_detail' pk=post.pk %}"
+            <div class="col-xs-12 fb-comments"
+                    data-href="https://patriciapenton.herokuapp.com{% url 'post_detail' pk=post.pk %}"
                     data-numposts="5">
             </div>
         {% endif %}
