@@ -242,6 +242,14 @@ code {
     text-align: center;
 }
 
+.twitter-share-button {
+    margin-left: 10px;
+}
+
+.fb-share-button {
+    margin-bottom: 15px;
+}
+
 /*============================================================================
 Media queries for mobile and tablet responsiveness
 ============================================================================*/
