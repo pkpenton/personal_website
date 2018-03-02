@@ -237,13 +237,10 @@ code {
 
 .fb-comments {
     padding: 0;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    text-align: center;
 }
 
 .twitter-share-button {
-    margin-left: 5px;
+    /*margin-top: 5px;*/
 }
 
 /*============================================================================
