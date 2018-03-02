@@ -9,6 +9,8 @@
     <meta name="twitter:image" content="{{ post.list_image.url }}"/>
     <meta name="twitter:title" content="{{ post.title }}"/>
     <meta name="twitter:description" content="Patricia Penton's Blog"/>
+
+    <meta property="fb:admins" content="pkpenton"/>
 {% endblock %}
 
 {% block content %}
@@ -37,7 +39,13 @@
             </div>
         </div>
 
-        <div class="fb-comments" data-href="{% url 'post_detail' pk=post.pk %}" data-numposts="5"></div>
+        {% if not post.medium_post %}
+            <hr>
+
+            <div class="col-xs-12 fb-comments" data-href="http://127.0.0.1:8000{% url 'post_detail' pk=post.pk %}"
+                    data-numposts="5">
+            </div>
+        {% endif %}
     </div>
 </div>
 {% endblock %}

@@ -47,7 +47,7 @@ hr {
     display: block;
     border-style: solid;
     border-width: 0.5px;
-    color: #123C69;
+    color: #c5ced8;
 }
 
 h1 {
@@ -233,6 +233,13 @@ code {
 .static-content-list li {
     padding-top: 4px;
     padding-bottom: 4px;
+}
+
+.fb-comments {
+    padding: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 /*============================================================================
