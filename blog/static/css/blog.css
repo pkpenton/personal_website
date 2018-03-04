@@ -239,8 +239,9 @@ code {
     padding: 0;
 }
 
-.twitter-share-button {
-    /*margin-top: 5px;*/
+.fb-share-button {
+    padding: 0;
+    margin: 0;
 }
 
 /*============================================================================
