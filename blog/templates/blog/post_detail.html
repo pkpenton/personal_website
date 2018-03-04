@@ -1,6 +1,7 @@
 {% extends 'blog/blog_base.html' %}
 
 {% block ogtags %}
+    <meta property="og:url" content="https://patriciapenton.herokuapp.com{% url 'post_detail' pk=post.pk %}"/>
     <meta property="og:image" content="{{ post.list_image.url }}"/>
     <meta property="og:title" content="{{ post.title }}"/>
     <meta property="og:description" content="Patricia Penton's Blog"/>
@@ -9,9 +10,45 @@
     <meta name="twitter:image" content="{{ post.list_image.url }}"/>
     <meta name="twitter:title" content="{{ post.title }}"/>
     <meta name="twitter:description" content="Patricia Penton's Blog"/>
+
+    <meta property="fb:app_id" content="307637819760838"/>
 {% endblock %}
 
 {% block content %}
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12';
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12&appId=307637819760838&autoLogAppEvents=1';
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<script>window.twttr = (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0],
+        t = window.twttr || {};
+    if (d.getElementById(id)) return t;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "https://platform.twitter.com/widgets.js";
+    fjs.parentNode.insertBefore(js, fjs);
+
+    t._e = [];
+    t.ready = function(f) {
+        t._e.push(f);
+    };
+
+    return t;
+}(document, "script", "twitter-wjs"));</script>
+
 <div class="body-container site-content first">
     <div class="page-content">
         <div class="row blog-detail">
@@ -22,11 +59,52 @@
                     </p>
                 {% endif %}
                 <h1>{{ post.title }}</h1>
-                {% autoescape off %}
-                    {{ post.text|linebreaksbr }}
-                {% endautoescape %}
+
+                {% if not post.medium_post %}
+                    {% autoescape off %}
+                        {{ post.text|linebreaksbr }}
+                    {% endautoescape %}
+                {% else %}
+                    <p>
+                        This article was originally published on Medium.
+                        <a class="read-more" href="{{ post.medium_url }}" target="_blank">
+                            Click here</a> to see the original post.
+                    </p>
+                {% endif %}
             </div>
         </div>
+
+        {% if not post.medium_post %}
+            <div class="fb-share-button"
+                    data-href="https://patriciapenton.herokuapp.com{% url 'post_detail' pk=post.pk %}"
+                    data-layout="button" data-size="large" data-mobile-iframe="true">
+
+                    <a target="_blank"
+                            href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fpatriciapenton.herokuapp.com%2F&amp;src=sdkpreparse"
+                            class="fb-xfbml-parse-ignore">
+                        Share
+                    </a>
+            </div>
+
+            <div class="tweet-button">
+                <a class="twitter-share-button"
+                        href="https://twitter.com/share"
+                        data-text="{{ post.title }}"
+                        data-via="pkpenton"
+                        data-related="pkpenton"
+                        data-size="large"
+                        target="_blank">
+                    Tweet
+                </a>
+            </div>
+
+            <hr>
+
+            <div class="col-xs-12 fb-comments"
+                    data-href="https://patriciapenton.herokuapp.com{% url 'post_detail' pk=post.pk %}"
+                    data-numposts="5" data-mobile="true">
+            </div>
+        {% endif %}
     </div>
 </div>
 {% endblock %}
