@@ -412,4 +412,8 @@ Media queries for mobile and tablet responsiveness
         width: inherit;
         padding-bottom: 15px;
     }
+
+    .tweet-button {
+        margin-top: 10px;
+    }
 }
