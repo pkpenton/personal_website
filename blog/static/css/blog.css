@@ -239,6 +239,10 @@ code {
     padding: 0;
 }
 
+.tweet-button {
+    margin-top: 10px;
+}
+
 /*============================================================================
 Media queries for mobile and tablet responsiveness
 ============================================================================*/
@@ -411,9 +415,5 @@ Media queries for mobile and tablet responsiveness
         margin: 5px;
         width: inherit;
         padding-bottom: 15px;
-    }
-
-    .tweet-button {
-        margin-top: 10px;
     }
 }
