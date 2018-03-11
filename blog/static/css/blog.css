@@ -209,6 +209,12 @@ code {
     width: 300px;
 }
 
+.eyebrow-pic {
+    float: left;
+    margin-right: 25px;
+    width: 350px;
+}
+
 .footer-envelope {
     padding: 2px;
 }
@@ -415,5 +421,11 @@ Media queries for mobile and tablet responsiveness
         margin: 5px;
         width: inherit;
         padding-bottom: 15px;
+    }
+
+    .eyebrow-pic {
+        margin: 5px;
+        width: inherit;
+        padding-bottom: 20px;
     }
 }
