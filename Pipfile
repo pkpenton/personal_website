@@ -14,7 +14,7 @@ django-ckeditor = "*"
 
 django = "*"
 gunicorn = "*"
-django-heroku = "*"
+#django-heroku = "*"
 whitenoise = "*"
 dj-database-url = "*"
 "boto3" = "*"
