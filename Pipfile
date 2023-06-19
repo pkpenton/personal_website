@@ -12,7 +12,7 @@ django-ckeditor = "*"
 
 [packages]
 
-django = "*"
+django = "2.2.24"
 gunicorn = "*"
 #django-heroku = "*"
 whitenoise = "*"

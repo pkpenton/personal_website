@@ -5,4 +5,5 @@ from django.apps import AppConfig
 
 
 class HomepageConfig(AppConfig):
-    name = 'homepage'
+    name = 'static_pages.apps'
+

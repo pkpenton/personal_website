@@ -55,6 +55,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -163,6 +164,7 @@ if bool(os.environ.get('IS_PRODUCTION')):
     DEFAULT_FILE_STORAGE = 'main_site.storage_backends.MediaStorage'
 
 if not bool(os.environ.get('IS_PRODUCTION')):
-    STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 elif bool(os.environ.get('IS_PRODUCTION')):
     STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+

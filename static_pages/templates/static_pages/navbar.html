@@ -1,4 +1,4 @@
-{% load staticfiles %}
+{% load static %}
 
 <div class="nav-bar">
     <div id="nav-bar-container" class="hide-for-mobile">
@@ -8,8 +8,8 @@
         <div class="nav-desktop">
             <ul>
                 <li><a href="/about/">About</a></li>|
-                <li><a href="{% static 'pdf/penton_resume_03_18.pdf' %}">R&eacute;sum&eacute;</a></li>|
-                <li><a href="{% url 'post_list' %}">Blog</a></li>
+                <li><a href="{% static 'pdf/penton_resume_03_18.pdf' %}">R&eacute;sum&eacute;</a></li>
+                {# <li><a href="{% url 'post_list' %}">Blog</a></li> #}
             </ul>
         </div>
     </div>
@@ -24,7 +24,7 @@
             <ul>
                 <a href="/about/"><li>About</li></a>
                 <a href="/resume/"><li>R&eacute;sum&eacute;</li></a>
-                <a href="{% url 'post_list' %}"><li>Blog</li></a>
+                {# <a href="{% url 'post_list' %}"><li>Blog</li></a> #}
             </ul>
         </div>
     </div>
