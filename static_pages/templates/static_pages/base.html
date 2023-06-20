@@ -32,6 +32,18 @@ All rights reserved
     </head>
 
     <body class="site">
+        <style>
+	    .jumbotron {
+		position: relative;
+		background: #000 url({% static "images/ecuador.jpg" %}) center center;
+		width: 100%;
+		background-size: cover;
+		overflow: hidden;
+		text-align: right;
+		margin-bottom: 0;
+		height: 100vh;
+	    }
+	</style>
         <header>
             {% include "static_pages/navbar.html" %}
         </header>
