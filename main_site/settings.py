@@ -164,7 +164,7 @@ AWS_S3_OBJECT_PARAMETERS = {
     # DEFAULT_FILE_STORAGE = 'main_site.storage_backends.MediaStorage'
 
 # if not bool(os.environ.get('IS_PRODUCTION')):
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+#STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # elif bool(os.environ.get('IS_PRODUCTION')):
     # STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
