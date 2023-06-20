@@ -260,6 +260,14 @@ Media queries for mobile and tablet responsiveness
     .special-tablet {
         display: none;
     }
+    
+        h1.display-3 {
+        font-size: 38px;
+    }
+
+    p.jumbo-subheader {
+        font-size: 18px;
+    }
 }
 
 @media screen and (max-width: 980px) {
@@ -281,6 +289,14 @@ Media queries for mobile and tablet responsiveness
 
     .container {
         width: 700px;
+    }
+    
+        h1.display-3 {
+        font-size: 38px;
+    }
+
+    p.jumbo-subheader {
+        font-size: 18px;
     }
 }
 
