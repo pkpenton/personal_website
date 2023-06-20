@@ -137,19 +137,19 @@ USE_TZ = True
 
 # AWS_QUERYSTRING_AUTH = False
 
-if not bool(os.environ.get('IS_PRODUCTION')):
-    STATIC_URL = '/static/'
-    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-elif bool(os.environ.get('IS_PRODUCTION')):
-    STATIC_URL = 'https://patricia-penton.s3.amazonaws.com/'
-    STATIC_ROOT = 'https://patricia-penton.s3.amazonaws.com/'
+# if not bool(os.environ.get('IS_PRODUCTION')):
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# elif bool(os.environ.get('IS_PRODUCTION')):
+    # STATIC_URL = 'https://patricia-penton.s3.amazonaws.com/'
+    # STATIC_ROOT = 'https://patricia-penton.s3.amazonaws.com/'
 
-if not bool(os.environ.get('IS_PRODUCTION')):
-    MEDIA_URL = '/media/'
-    MEDIA_ROOT = BASE_DIR
-elif bool(os.environ.get('IS_PRODUCTION')):
-    MEDIA_URL = 'https://patricia-penton.s3.amazonaws.com/'
-    MEDIA_ROOT = 'https://patricia-penton.s3.amazonaws.com/'
+# if not bool(os.environ.get('IS_PRODUCTION')):
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR
+# elif bool(os.environ.get('IS_PRODUCTION')):
+    # MEDIA_URL = 'https://patricia-penton.s3.amazonaws.com/'
+    # MEDIA_ROOT = 'https://patricia-penton.s3.amazonaws.com/'
 
 AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
 AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
@@ -160,11 +160,11 @@ AWS_S3_OBJECT_PARAMETERS = {
     'CacheControl': 'max-age=86400',
 }
 
-if bool(os.environ.get('IS_PRODUCTION')):
-    DEFAULT_FILE_STORAGE = 'main_site.storage_backends.MediaStorage'
+# if bool(os.environ.get('IS_PRODUCTION')):
+    # DEFAULT_FILE_STORAGE = 'main_site.storage_backends.MediaStorage'
 
-if not bool(os.environ.get('IS_PRODUCTION')):
-    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-elif bool(os.environ.get('IS_PRODUCTION')):
-    STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+# if not bool(os.environ.get('IS_PRODUCTION')):
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# elif bool(os.environ.get('IS_PRODUCTION')):
+    # STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
