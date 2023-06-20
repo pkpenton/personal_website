@@ -332,11 +332,11 @@ Media queries for mobile and tablet responsiveness
     }
 
     h1.display-3 {
-        font-size: 63px;
+        font-size: 38px;
     }
 
     p.jumbo-subheader {
-        font-size: 28px;
+        font-size: 18px;
     }
 }
 
@@ -375,10 +375,10 @@ Media queries for mobile and tablet responsiveness
     .mobile-name-block {
         height: 70px;
         line-height: 70px;
-        font-size: 43px;
+        font-size: 30px;
         background-color: #123C69;
         color: #fff;
-        font-family: 'Amatic SC', serif;
+        font-family: 'Quicksand', serif;
         text-align: left;
         padding-left: 15px;
     }
@@ -401,11 +401,11 @@ Media queries for mobile and tablet responsiveness
     }
 
     h1.display-3 {
-        font-size: 53px;
+        font-size: 30px;
     }
 
     p.jumbo-subheader {
-        font-size: 28px;
+        font-size: 18px;
     }
 
     .welcome-message {

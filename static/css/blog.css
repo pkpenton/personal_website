@@ -35,11 +35,19 @@ body {
     font-family: 'Quicksand', sans-serif;
 }
 
+.extra-margin {
+    margin-bottom: 30px;
+}
+
+.publications p {
+    margin-bottom: 20px;
+}
+
 hr {
     display: block;
     border-style: solid;
     border-width: 0.5px;
-    color: #123C69;
+    color: #c5ced8;
 }
 
 h1 {
@@ -85,7 +93,6 @@ h3.pi {
 
 p {
     line-height: 1.5;
-    padding: 10px 0;
     font-family: 'Quicksand', sans-serif;
     color: #123C69;
 }
@@ -112,13 +119,17 @@ li a:hover {
     text-decoration: underline;
 }
 
-.blog-h1 a {
-    color: #123C69;
-    margin-top: 15px;
+h1.blog-h1 {
+    margin-top: 0;
 }
 
-.blog-h1 a:hover {
-    color: #f44336;
+h1.blog-h1 a {
+    color: #123C69;
+}
+
+h1.blog-h1 a:hover {
+    color: #123C69;
+    text-decoration: underline;
 }
 
 a {
@@ -127,7 +138,8 @@ a {
 }
 
 a:hover {
-    text-decoration: none;
+    color: #f44336;
+    text-decoration: underline;
 }
 
 p a:hover {
@@ -139,10 +151,9 @@ p a:hover {
     width: 100%;
 }
 
-.blog-date {
+p.blog-date {
     font-size: 16px;
     padding-bottom: 0;
-    margin-bottom: 0;
 }
 
 .light-blog {
@@ -168,13 +179,74 @@ p a:hover {
     padding-bottom: 40px;
 }
 
-.resume li {
-    padding-top: 4px;
-    padding-bottom: 4px;
+.fun-facts-list li {
+    padding-top: 6px;
+    padding-bottom: 6px;
 }
 
 .journal-title {
     font-style: italic;
+}
+
+code {
+    padding: 2px 4px;
+    font-size: 80%;
+    color: #F44336;
+    background-color: #F8F8F8;
+    border: 1px solid #c6c6c6;
+    border-radius: 4px;
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+.blog-detail {
+    padding-bottom: 25px;
+    color: #123C69;
+}
+
+.goals-binder {
+    float: right;
+    margin: 5px;
+    width: 300px;
+}
+
+.eyebrow-pic {
+    float: left;
+    margin-right: 25px;
+    width: 350px;
+}
+
+.footer-envelope {
+    padding: 2px;
+}
+
+.emphasis {
+    color: #f44336;
+}
+
+.halloween-desktop {
+    margin-bottom: 30px;
+    padding-left: 0;
+}
+
+.quote {
+    text-align: center;
+}
+
+.hello-world p {
+    padding-bottom: 15px;
+}
+
+.static-content-list li {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.fb-comments {
+    padding: 0;
+}
+
+.tweet-button {
+    margin-top: 10px;
 }
 
 /*============================================================================
@@ -184,10 +256,18 @@ Media queries for mobile and tablet responsiveness
     .hide-for-desktop {
         display: none;
     }
+
+    .special-tablet {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 980px) {
     .hide-for-desktop {
+        display: none;
+    }
+
+    .special-tablet {
         display: none;
     }
 
@@ -209,9 +289,13 @@ Media queries for mobile and tablet responsiveness
         display: none;
     }
 
+    .special-tablet {
+        display: inherit;
+    }
+
     .body-container {
         width: 600px;
-        margin-top: 120px;
+        margin-top: 60px;
     }
 
     #nav-bar-container {
@@ -248,16 +332,20 @@ Media queries for mobile and tablet responsiveness
     }
 
     h1.display-3 {
-        font-size: 63px;
+        font-size: 38px;
     }
 
     p.jumbo-subheader {
-        font-size: 28px;
+        font-size: 18px;
     }
 }
 
 @media screen and (max-width: 640px) {
     .hide-for-mobile {
+        display: none;
+    }
+
+    .special-tablet {
         display: none;
     }
 
@@ -268,6 +356,10 @@ Media queries for mobile and tablet responsiveness
     .body-container {
         width: 300px;
         margin-top: 70px;
+    }
+
+    .page-content {
+        width: 300px;
     }
 
     #nav-bar-container {
@@ -283,10 +375,10 @@ Media queries for mobile and tablet responsiveness
     .mobile-name-block {
         height: 70px;
         line-height: 70px;
-        font-size: 43px;
+        font-size: 30px;
         background-color: #123C69;
         color: #fff;
-        font-family: 'Amatic SC', serif;
+        font-family: 'Quicksand', serif;
         text-align: left;
         padding-left: 15px;
     }
@@ -305,14 +397,35 @@ Media queries for mobile and tablet responsiveness
     }
 
     .display-3 {
-        margin-top: 70px;
+        margin-top: 60px;
     }
 
     h1.display-3 {
-        font-size: 58px;
+        font-size: 30px;
     }
 
     p.jumbo-subheader {
-        font-size: 30px;
+        font-size: 18px;
+    }
+
+    .welcome-message {
+        width: -webkit-fill-available;
+        padding-right: 20px;
+    }
+
+    .full-width {
+        margin-bottom: 20px;
+    }
+
+    .goals-binder {
+        margin: 5px;
+        width: inherit;
+        padding-bottom: 15px;
+    }
+
+    .eyebrow-pic {
+        margin: 5px;
+        width: inherit;
+        padding-bottom: 20px;
     }
 }

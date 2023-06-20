@@ -4,20 +4,20 @@
 
 .display-3 {
     margin-top: 50px;
-    font-family: 'Amatic SC', serif;
+    font-family: 'Quicksand', serif;
     margin-bottom: 0;
     padding-bottom: 0;
     color: black;
 }
 
 .jumbo-subheader {
-    font-family: 'Amatic SC', serif;
-    font-size: 33px;
+    font-family: 'Quicksand', serif;
+    font-size: 20px;
     padding-top: 0;
 }
 
 p.jumbo-subheader {
-    font-size: 33px;
+    font-size: 20px;
     color: black;
 }
 
